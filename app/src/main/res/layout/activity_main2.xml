@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/tutorial"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity2">
 
     <ImageView
         android:id="@+id/imageView3"
@@ -18,7 +18,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/tutorial" />
+        app:srcCompat="@mipmap/tutorial2" />
 
     <TextView
         android:id="@+id/textView3"
@@ -33,7 +33,7 @@
         android:width="273dp"
         android:fontFamily="@font/roboto"
         android:gravity="center"
-        android:text="@string/tutorial1"
+        android:text="@string/tutorial2"
         android:textColor="#000000"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/imageButton2"
@@ -91,7 +91,7 @@
         app:layout_constraintHorizontal_bias="0.439"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3"
-        app:srcCompat="@mipmap/opcao2" />
+        app:srcCompat="@mipmap/opcao1" />
 
     <ImageView
         android:id="@+id/imageView5"
@@ -104,7 +104,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3"
-        app:srcCompat="@mipmap/opcao1" />
+        app:srcCompat="@mipmap/opcao2" />
 
     <ImageView
         android:id="@+id/imageView8"
