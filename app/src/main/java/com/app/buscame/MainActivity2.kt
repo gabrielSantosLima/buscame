@@ -5,12 +5,12 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.core.app.ActivityCompat
 import androidx.core.app.ActivityOptionsCompat
-import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_main2.*
 
-class MainActivity : AppCompatActivity() {
+class MainActivity2 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_main2)
 
         imageButton2.setOnClickListener {
             openNextActivity()
@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun openNextActivity() {
-        val intent = Intent(this, MainActivity2::class.java)
+        val intent = Intent(this, MainActivity3::class.java)
         val activityOptionsCompat = ActivityOptionsCompat.makeCustomAnimation(applicationContext, R.anim.move_left, R.anim.move_left)
         ActivityCompat.startActivities(this, arrayOf(intent), activityOptionsCompat.toBundle())
     }
