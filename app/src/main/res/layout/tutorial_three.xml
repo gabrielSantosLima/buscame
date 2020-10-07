@@ -36,14 +36,14 @@
         android:text="@string/tutorial3"
         android:textColor="#000000"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/btnAdvance"
+        app:layout_constraintBottom_toTopOf="@+id/btnRun"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imgTutorial" />
 
     <ImageButton
-        android:id="@+id/btnJump"
+        android:id="@+id/btnComeBack"
         android:layout_width="56dp"
         android:layout_height="28dp"
         android:layout_marginStart="0dp"
@@ -56,14 +56,14 @@
         android:contentDescription="@string/todo"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnAdvance"
+        app:layout_constraintEnd_toStartOf="@+id/btnRun"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textTutorial"
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@mipmap/setae" />
 
     <ImageButton
-        android:id="@+id/btnAdvance"
+        android:id="@+id/btnRun"
         android:layout_width="71dp"
         android:layout_height="37dp"
         android:layout_marginEnd="19dp"
@@ -75,7 +75,7 @@
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnJump"
+        app:layout_constraintStart_toEndOf="@+id/btnComeBack"
         app:layout_constraintTop_toBottomOf="@+id/textTutorial"
         app:srcCompat="@mipmap/comecar" />
 
