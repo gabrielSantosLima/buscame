@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/tela1"
+    tools:context=".SplashActivity">
+
+    <TextView
+        android:id="@+id/textSplash"
+        android:layout_width="243dp"
+        android:layout_height="126dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginBottom="199dp"
+        android:fontFamily="@font/roboto"
+        android:gravity="center"
+        android:text="@string/buscame"
+        android:textColor="#000000"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/imgTeam"
+        app:layout_constraintEnd_toEndOf="@+id/imgLogo"
+        app:layout_constraintTop_toBottomOf="@+id/imgLogo" />
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="243dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="268dp"
+        android:layout_marginBottom="238dp"
+        android:contentDescription="@string/todo"
+        app:layout_constraintBottom_toTopOf="@+id/imgBee"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/bolsa" />
+
+    <TextView
+        android:id="@+id/imgTeam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="53dp"
+        android:fontFamily="@font/roboto"
+        android:text="@string/by_equipe_buscame"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textSplash" />
+
+    <ImageView
+        android:id="@+id/imgBee"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="127dp"
+        android:layout_marginRight="127dp"
+        android:contentDescription="@string/todo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imgTeam"
+        app:layout_constraintTop_toBottomOf="@+id/imgLogo"
+        app:srcCompat="@mipmap/bee" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
