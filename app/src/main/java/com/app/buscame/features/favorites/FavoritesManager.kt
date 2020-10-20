@@ -32,10 +32,10 @@ class FavoritesManager(private val dir: String, private val filename : String = 
         val isCreatedFile = file.createNewFile()
 
         if(isCreatedFile){
-            val id = randomNumberHex() //TODO Regra de negócio - deve mudar de lugar
+            val id = randomNumberHex() // TODO Regra de negócio - deve mudar de lugar
 
-            favorite.id = id //TODO Regra de negócio - deve mudar de lugar
-            favorite.product.id = id //TODO Regra de negócio - deve mudar de lugar
+            favorite.id = id // TODO Regra de negócio - deve mudar de lugar
+            favorite.product.id = id // TODO Regra de negócio - deve mudar de lugar
 
             writeJson(file, listOf(favorite))
             return
