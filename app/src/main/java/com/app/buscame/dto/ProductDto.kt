@@ -3,6 +3,7 @@ package com.app.buscame.dto
 import java.io.File
 
 data class ProductDto(
+    var id: String?,
     val term : String,
     val title : String,
     val price : Double,
