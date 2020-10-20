@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.core.app.ActivityCompat
 import androidx.core.app.ActivityOptionsCompat
+import com.app.buscame.features.share.ShareMessage
 import kotlinx.android.synthetic.main.tutorial_one.*
 
 class TutorialOne : AppCompatActivity() {
@@ -13,8 +14,13 @@ class TutorialOne : AppCompatActivity() {
         setContentView(R.layout.tutorial_one)
 
         btnAdvance.setOnClickListener {
-            openNextActivity()
+//            openNextActivity()
+            algo()
         }
+    }
+
+    private fun algo(){
+        ShareMessage(this, "Teste").shareMessage("O site wwww.google.com.br é muito bom. Experimente!")
     }
 
     private fun openNextActivity() {
