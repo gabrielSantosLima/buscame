@@ -21,7 +21,7 @@ import java.io.File
  */
 
 // dir_default : applicationContext.filesDir.path
-class FavoritesManager(private val dir: String, private val filename : String = "favorites.json") : IFavoritesManager{
+class FavoritesManagerJson(private val dir: String, private val filename : String = "favorites.json") : IFavoritesManager{
 
     private val gson = Gson()
 

@@ -5,7 +5,7 @@ import com.app.buscame.utils.randomNumberHex
 import com.google.gson.Gson
 import java.io.File
 
-class HistoricManager(private val dir: String, private val filename : String = "historic.json") : IHistoricManager{
+class HistoricManagerJson(private val dir: String, private val filename : String = "historic.json") : IHistoricManager{
 
     private val gson = Gson()
 

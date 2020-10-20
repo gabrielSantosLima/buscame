@@ -1,7 +1,8 @@
 package com.app.buscame.features.share
 
-import android.content.Intent
+import com.app.buscame.dto.ProductDto
 
 interface IShareMessage {
     fun shareMessage(text: String)
+    fun shareProduct(productDto: ProductDto)
 }
