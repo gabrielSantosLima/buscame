@@ -5,4 +5,6 @@
     <color name="colorAccent">#03DAC5</color>
     <color name="tela1">#FFE603</color>
     <color name="tutorial">#FFFFBA</color>
+    <color name="btnFont">#646161</color>
+
 </resources>

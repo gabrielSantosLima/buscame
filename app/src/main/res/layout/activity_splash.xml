@@ -9,60 +9,68 @@
 
     <TextView
         android:id="@+id/textSplash"
-        android:layout_width="243dp"
-        android:layout_height="126dp"
-        android:layout_marginEnd="3dp"
-        android:layout_marginRight="3dp"
-        android:layout_marginBottom="199dp"
+        android:layout_width="218dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        android:layout_marginBottom="211dp"
         android:fontFamily="@font/roboto"
         android:gravity="center"
         android:text="@string/buscame"
         android:textColor="#000000"
         android:textSize="36sp"
-        app:layout_constraintBottom_toTopOf="@+id/imgTeam"
-        app:layout_constraintEnd_toEndOf="@+id/imgLogo"
-        app:layout_constraintTop_toBottomOf="@+id/imgLogo" />
-
-    <ImageView
-        android:id="@+id/imgLogo"
-        android:layout_width="243dp"
-        android:layout_height="150dp"
-        android:layout_marginTop="268dp"
-        android:layout_marginBottom="238dp"
-        android:contentDescription="@string/todo"
         app:layout_constraintBottom_toTopOf="@+id/imgBee"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/bolsa" />
+        app:layout_constraintTop_toBottomOf="@+id/imgHandbag" />
 
     <TextView
         android:id="@+id/imgTeam"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="53dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginLeft="11dp"
         android:fontFamily="@font/roboto"
         android:text="@string/by_equipe_buscame"
         android:textColor="#000000"
         android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/imgBee"
+        app:layout_constraintEnd_toStartOf="@+id/imgBee"
+        app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textSplash" />
+        app:layout_constraintTop_toBottomOf="@+id/imgBee" />
+
+    <ImageView
+        android:id="@+id/imgHandbag"
+        android:layout_width="240dp"
+        android:layout_height="156dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="280dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        android:layout_marginBottom="10dp"
+        android:contentDescription="@string/todo"
+        app:layout_constraintBottom_toTopOf="@+id/textSplash"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.562"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_handbag" />
 
     <ImageView
         android:id="@+id/imgBee"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="127dp"
-        android:layout_marginRight="127dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="19dp"
         android:contentDescription="@string/todo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/imgTeam"
-        app:layout_constraintTop_toBottomOf="@+id/imgLogo"
-        app:srcCompat="@mipmap/bee" />
+        app:layout_constraintTop_toBottomOf="@+id/textSplash"
+        app:srcCompat="@drawable/ic_bee" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
