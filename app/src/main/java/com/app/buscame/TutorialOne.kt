@@ -16,8 +16,8 @@ class TutorialOne : AppCompatActivity() {
         setContentView(R.layout.tutorial_one)
 
         btnAdvance.setOnClickListener {
-//            openNextActivity()
-            algo()
+              openNextActivity()
+//            algo()
         }
     }
 

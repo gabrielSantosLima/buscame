@@ -6,4 +6,6 @@
     <string name="tutorial1">Bem-Vindo ao BuscaMe! O seu aplicativo de busca que lhe ajuda a procurar os melhores produtos e comparar ofertas em vários sites!</string>
     <string name="tutorial2">Através da câmera de seu celular você pode pesquisa qualquer produto!</string>
     <string name="tutorial3">Compartilhe as melhores ofertas e seus produtos favoritos com seus amigos!</string>
+    <string name="btnAdvance">PULAR</string>
+    <string name="btnRun">COMEÇAR</string>
 </resources>
