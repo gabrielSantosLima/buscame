@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Buscame</string>
+    <string name="todo">TODO</string>
+    <string name="buscame">BuscaMe</string>
+    <string name="by_equipe_buscame">by Equipe BuscaMe</string>
+    <string name="tutorial1">Bem-Vindo ao BuscaMe! O seu aplicativo de busca que lhe ajuda a procurar os melhores produtos e comparar ofertas em vários sites!</string>
+    <string name="tutorial2">Através da câmera de seu celular você pode pesquisa qualquer produto!</string>
+    <string name="tutorial3">Compartilhe as melhores ofertas e seus produtos favoritos com seus amigos!</string>
+</resources>
