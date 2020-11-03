@@ -1,3 +1,28 @@
 <resources>
-    <string name="app_name">buscame</string>
+    <string name="app_name">BuscaMe</string>
+    <string name="todo">TODO</string>
+    <string name="buscame">BuscaMe</string>
+    <string name="by_equipe_buscame">by Equipe BuscaMe</string>
+    <string name="tutorial1">Bem-Vindo ao BuscaMe! O seu aplicativo de busca que lhe ajuda a procurar os melhores produtos e comparar ofertas em vários sites!</string>
+    <string name="tutorial2">Através da câmera de seu celular você pode pesquisa qualquer produto!</string>
+    <string name="tutorial3">Compartilhe as melhores ofertas e seus produtos favoritos com seus amigos!</string>
+    <string name="btnAdvance">PULAR</string>
+    <string name="btnRun">COMEÇAR</string>
+    <string name="searchText">Procurar Produto</string>
+    <string name="result">Seus resultados serão exibidos aqui</string>
+    <string name="som">Sons do aplicativo</string>
+    <string name="information">Informações</string>
+    <string name="informationApp">Informações sobre o aplicativo</string>
+    <string name="sons">Sons</string>
+    <string name="som_off_on">Permite desativar as opções de áudio do aplicativo</string>
+    <string name="dark">Modo Escuro</string>
+    <string name="modoDark">Este é um exemplo de configuração em quem o usuário poderá ativar ou desativar esta opção</string>
+    <string name="appearance">Aparência</string>
+    <string name="aboutApp">Sobre o aplicativo</string>
+    <string name="settings">Configurações</string>
+    <string name="brand">Marca</string>
+    <string name="site">Site</string>
+    <string name="price">Preço</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="favorite">Favoritos</string>
 </resources>
