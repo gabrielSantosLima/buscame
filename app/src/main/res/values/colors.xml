@@ -3,11 +3,16 @@
     <color name="colorPrimary">#006200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
-    <color name="tela1">#FFE603</color>
+    <color name="yellow">#FFE603</color>
     <color name="tutorial">#FFFFBA</color>
     <color name="btnFont">#646161</color>
     <color name="btnBackground">#000000</color>
     <color name="header">#FFFFFF</color>
     <color name="settings">#EAEAEA</color>
-
+    <color name="black">#000</color>
+    <color name="white">#FFF</color>
+    <color name="shadow">#40000000</color>
+    <color name="background">#FFF</color>
+    <color name="inputSearch">#FFF</color>
+    <color name="cardBackground">#FFF</color>
 </resources>

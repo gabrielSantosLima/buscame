@@ -167,7 +167,7 @@
         android:id="@+id/imageView5"
         android:layout_width="40dp"
         android:layout_height="35dp"
-        app:srcCompat="@drawable/notion"
+        app:srcCompat="@drawable/ic_notion"
         tools:layout_editor_absoluteX="40dp"
         tools:layout_editor_absoluteY="215dp" />
 

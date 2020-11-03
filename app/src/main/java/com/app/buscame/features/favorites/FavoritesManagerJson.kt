@@ -5,22 +5,7 @@ import com.app.buscame.utils.randomNumberHex
 import com.google.gson.Gson
 import java.io.File
 
-
-/**  Etapas - Favoritos
-
-    # 1 - Verificar se o arquivo favorites.json existe
-    # 1.1.1 - Caso exista, ler arquivo favorites.json e serializar para um array de favoritos
-    # 1.1.2 - Adicionar novo favorito
-    # 1.1.3 - Gravar no arquivo os favoritos
-    # 1.2.1 - Criar arquivo
-    # 1.2.2 - Gravar primeiros dados
-
-    # 2 - Ler dados do favorites.json (Caso exista)
-    # 2.1 - Buscar por favorites.json
-    # 2.2 - Ler dados do arquivo
- */
-
-// dir_default : applicationContext.filesDir.path
+// default_dir: applicationContext.filesDir.path
 class FavoritesManagerJson(private val dir: String, private val filename : String = "favorites.json") : IFavoritesManager{
 
     private val gson = Gson()
