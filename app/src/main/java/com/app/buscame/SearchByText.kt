@@ -5,14 +5,12 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.core.app.ActivityCompat
 import androidx.core.app.ActivityOptionsCompat
-import kotlinx.android.synthetic.main.tutorial_three.*
+import kotlinx.android.synthetic.main.search_by_text.*
 
-class TutorialThree : AppCompatActivity() {
+class SearchByText : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.tutorial_three)
-
-
+        setContentView(R.layout.search_by_text)
     }
 
 }

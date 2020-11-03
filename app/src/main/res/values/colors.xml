@@ -6,5 +6,8 @@
     <color name="tela1">#FFE603</color>
     <color name="tutorial">#FFFFBA</color>
     <color name="btnFont">#646161</color>
+    <color name="btnBackground">#000000</color>
+    <color name="header">#FFFFFF</color>
+    <color name="settings">#EAEAEA</color>
 
 </resources>

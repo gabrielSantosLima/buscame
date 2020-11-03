@@ -1,5 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_graph">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/tutorialOneFragment">
 
+    <fragment
+        android:id="@+id/tutorialTwoFragment"
+        android:name="com.app.buscame.TutorialTwoFragment"
+        android:label="fragment_tutorial_two"
+        tools:layout="@layout/fragment_tutorial_two" >
+        <action
+            android:id="@+id/action_tutorialTwoFragment_to_tutorialThreeFragment"
+            app:destination="@id/tutorialThreeFragment" />
+        <action
+            android:id="@+id/action_tutorialTwoFragment_to_tutorialOneFragment"
+            app:destination="@id/tutorialOneFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tutorialThreeFragment"
+        android:name="com.app.buscame.TutorialThreeFragment"
+        android:label="fragment_tutorial_three"
+        tools:layout="@layout/fragment_tutorial_three" >
+        <action
+            android:id="@+id/action_tutorialThreeFragment_to_tutorialTwoFragment"
+            app:destination="@id/tutorialTwoFragment" />
+        <action
+            android:id="@+id/action_tutorialThreeFragment_to_searchByTextFragment"
+            app:destination="@id/searchByTextFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tutorialOneFragment"
+        android:name="com.app.buscame.TutorialOneFragment"
+        android:label="fragment_tutorial_one"
+        tools:layout="@layout/fragment_tutorial_one" >
+        <action
+            android:id="@+id/action_tutorialOneFragment2_to_tutorialTwoFragment"
+            app:destination="@id/tutorialTwoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchByTextFragment"
+        android:name="com.app.buscame.SearchByTextFragment"
+        android:label="fragment_search_by_text"
+        tools:layout="@layout/fragment_search_by_text" />
 </navigation>
