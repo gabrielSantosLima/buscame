@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/tutorial"
-    tools:context=".TutorialThree">
+    android:background="@color/settings"
+    tools:context=".Settings">
 
     <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragmentTutorialThree"
+        android:id="@+id/fragmentSettings"
         android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

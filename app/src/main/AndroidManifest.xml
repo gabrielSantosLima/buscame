@@ -3,7 +3,7 @@
     package="com.app.buscame">
 
     <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -22,6 +22,9 @@
         <activity android:name=".TutorialThree" />
         <activity android:name=".TutorialTwo" />
         <activity android:name=".TutorialOne" />
+        <activity android:name=".Settings" />
+        <activity android:name=".SearchByText" />
+        <activity android:name=".About" />
 
         <meta-data
             android:name="preloaded_fonts"
