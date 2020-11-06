@@ -1,6 +1,7 @@
 package com.app.buscame.features.historic
 
 import com.app.buscame.dto.HistoryDto
+import com.app.buscame.utils.formatDateByPattern
 import com.app.buscame.utils.randomNumberHex
 import com.google.gson.Gson
 import java.io.File
@@ -55,6 +56,15 @@ class HistoricManagerJson(private val dir: String, private val filename : String
         if(isEquals) return
 
         writeJson(file, newHistoric)
+    }
+
+    override fun groupByDate(): Map<String,List<HistoryDto>> {
+        val historic = list()
+        val groupedHistoric = historic.groupBy {
+            formatDateByPattern("dd MMMM yyyy",it.date)
+        }
+
+        return groupedHistoric
     }
 
     override fun removeAll() {

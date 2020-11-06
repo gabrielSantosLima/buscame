@@ -15,4 +15,6 @@
     <color name="background">#FFF</color>
     <color name="inputSearch">#FFF</color>
     <color name="cardBackground">#FFF</color>
+    <color name="red">#E02B2B</color>
+    <color name="hint">#5C5353</color>
 </resources>
