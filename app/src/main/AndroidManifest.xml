@@ -12,13 +12,9 @@
         android:roundIcon="@mipmap/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-<<<<<<< HEAD
         <activity android:name=".HistoricActivity"></activity>
-        <activity android:name=".MainActivity">
-=======
         <activity android:name=".FavoriteActivity"></activity>
         <activity android:name=".SplashActivity">
->>>>>>> upstream/master
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

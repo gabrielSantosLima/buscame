@@ -117,7 +117,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <EditText
-        android:id="@+id/ipt_search"
+        android:id="@+id/layout"
         android:layout_width="350dp"
         android:layout_height="38dp"
         android:background="@drawable/search_input"
@@ -144,6 +144,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ipt_search" />
+        app:layout_constraintTop_toBottomOf="@+id/layout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

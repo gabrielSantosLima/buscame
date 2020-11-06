@@ -8,3 +8,5 @@ data class HistoryDto(
     val url: String,
     val date: Date
 )
+
+// List<HistoryDto>
