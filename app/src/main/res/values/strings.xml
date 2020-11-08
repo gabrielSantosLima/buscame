@@ -23,6 +23,7 @@
     <string name="brand">Marca</string>
     <string name="site">Site</string>
     <string name="price">Preço</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="favorite">Favoritos</string>
+    <string name="historic">Histórico</string>
 </resources>

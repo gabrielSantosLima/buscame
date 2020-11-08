@@ -7,4 +7,5 @@ interface IHistoricManager {
     fun list(): List<HistoryDto>
     fun removeAll()
     fun remove(id: String)
+    fun groupByDate(): Map<String,List<HistoryDto>>
 }

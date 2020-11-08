@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background"
     tools:context=".SearchByTextFragment">
 
     <ImageView
@@ -30,7 +31,7 @@
         android:layout_marginLeft="3dp"
         android:layout_marginEnd="2dp"
         android:layout_marginRight="2dp"
-        android:background="@drawable/ic_hearder_backgroud"
+        android:background="@drawable/nav_container"
         android:padding="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -50,8 +51,8 @@
 
         <TextView
             android:id="@+id/textSearch"
-            android:layout_width="228dp"
-            android:layout_height="46dp"
+            android:layout_width="236dp"
+            android:layout_height="64dp"
             android:layout_marginStart="10dp"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
