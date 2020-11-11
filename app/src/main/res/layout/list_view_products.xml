@@ -13,11 +13,13 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <Button
+        <ToggleButton
             android:id="@+id/bt_star"
             android:layout_width="25dp"
             android:layout_height="25dp"
             android:background="@drawable/ic_yellow_star"
+            android:checked="true"
+            android:textColor="@android:color/transparent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.041"

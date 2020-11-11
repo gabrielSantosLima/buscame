@@ -11,17 +11,14 @@ class FavoritesManagerJson(private val dir: String, private val filename : Strin
     private val gson = Gson()
 
     override fun save(favorite: FavoriteDto) {
-
-        //Gravar aquivo
         val file = File(dir,filename)
         val isCreatedFile = file.createNewFile()
 
+        val randomHex = randomNumberHex()
+        favorite.id = randomHex
+        favorite.product.id = randomHex
+
         if(isCreatedFile){
-            val id = randomNumberHex() // TODO Regra de negócio - deve mudar de lugar
-
-            favorite.id = id // TODO Regra de negócio - deve mudar de lugar
-            favorite.product.id = id // TODO Regra de negócio - deve mudar de lugar
-
             writeJson(file, listOf(favorite))
             return
         }
@@ -43,6 +40,21 @@ class FavoritesManagerJson(private val dir: String, private val filename : Strin
         val favorites = gson.fromJson(file.readText(), Array<FavoriteDto>::class.java)
 
         return favorites.toList()
+    }
+
+    override fun exists(id: String): Boolean {
+        val favorites = list()
+
+        val file = File(dir,filename)
+        val isFileExists = file.exists()
+
+        if(!isFileExists) return false
+
+        val favorite = favorites.find { it.id == id }
+
+        favorite ?: return false
+
+        return true
     }
 
     override fun remove(id: String) {
