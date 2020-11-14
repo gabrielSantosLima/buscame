@@ -1,7 +1,10 @@
 package com.app.buscame
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.core.app.ActivityCompat
+import androidx.core.app.ActivityOptionsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.app.buscame.features.favorites.FavoritesManagerJson
 import kotlinx.android.synthetic.main.activity_favorite.*
@@ -17,6 +20,9 @@ class FavoriteActivity : AppCompatActivity() {
         favoritesManagerJson = FavoritesManagerJson(applicationContext.filesDir.path)
 
         initRecycleView()
+        bt_config.setOnClickListener {
+            openNextActivity()
+        }
     }
 
     private fun initRecycleView(){
@@ -32,4 +38,10 @@ class FavoriteActivity : AppCompatActivity() {
             adapter = favoriteAdapter
         }
     }
+    private fun openNextActivity() {
+        val intent = Intent(this, Settings::class.java)
+        val activityOptionsCompat = ActivityOptionsCompat.makeCustomAnimation(applicationContext, R.anim.move_left, R.anim.move_left)
+        ActivityCompat.startActivities(this, arrayOf(intent), activityOptionsCompat.toBundle())
+    }
+
 }

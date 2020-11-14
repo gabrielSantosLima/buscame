@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/tutorial"
-    tools:context=".TutorialOneFragment">
+    tools:context=".TutorialOne">
 
     <ImageView
         android:id="@+id/imgTutorial"
@@ -70,7 +70,7 @@
         app:layout_constraintEnd_toStartOf="@+id/imgPointTutorial2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textTutorial"
-        app:srcCompat="@drawable/ic_point_white" />
+        app:srcCompat="@drawable/ic_point_black" />
 
     <ImageView
         android:id="@+id/imgPointTutorial2"
@@ -87,7 +87,7 @@
         app:layout_constraintEnd_toStartOf="@+id/imgPointTutorial3"
         app:layout_constraintStart_toEndOf="@+id/imgPointTutorial"
         app:layout_constraintTop_toBottomOf="@+id/textTutorial"
-        app:srcCompat="@drawable/ic_point_black" />
+        app:srcCompat="@drawable/ic_point_white" />
 
     <ImageView
         android:id="@+id/imgPointTutorial3"

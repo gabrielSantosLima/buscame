@@ -74,11 +74,13 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginBottom="7dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="12dp"
         android:text="@string/aboutApp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/layoutHeaderButton"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutHeader2" />
 
     <TextView
         android:id="@+id/textAppearance"
@@ -86,7 +88,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="8dp"
         android:fontFamily="@font/roboto"
         android:text="@string/appearance"
         android:textStyle="bold"
@@ -104,28 +106,31 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
         <TextView
             android:id="@+id/textInformation"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginLeft="16dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginLeft="14dp"
             android:fontFamily="@font/roboto"
             android:text="@string/information"
             android:textColor="@color/btnBackground"
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/textInformationApp"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/textInformationApp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginLeft="16dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginLeft="14dp"
+            android:layout_marginTop="25dp"
             android:fontFamily="@font/roboto"
             android:text="@string/informationApp"
             android:textColor="@color/btnBackground"
@@ -137,14 +142,17 @@
 
         <ImageButton
             android:id="@+id/imgRunButtton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="33dp"
+            android:layout_height="31dp"
             android:layout_marginStart="166dp"
             android:layout_marginLeft="166dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
             android:adjustViewBounds="true"
             android:background="#00FFFFFF"
             android:contentDescription="@string/todo"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/textInformationApp"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ic_advance_stt" />
@@ -191,23 +199,18 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
-        <ImageButton
-            android:id="@+id/imageButton3"
+        <Switch
+            android:id="@+id/switch1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="42dp"
-            android:layout_marginLeft="42dp"
-            android:layout_marginEnd="28dp"
-            android:layout_marginRight="28dp"
-            android:layout_marginBottom="20dp"
-            android:adjustViewBounds="true"
-            android:background="#00FFFFFF"
-            android:contentDescription="@string/todo"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="22dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.1"
-            app:layout_constraintStart_toEndOf="@+id/textSom"
-            app:srcCompat="@drawable/ic_btn_on" />
+            app:layout_constraintTop_toTopOf="parent" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -227,7 +230,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="14dp"
             android:layout_marginLeft="14dp"
-            android:layout_marginTop="11dp"
+            android:layout_marginTop="15dp"
             android:layout_marginBottom="20dp"
             android:fontFamily="@font/roboto"
             android:text="@string/dark"
@@ -242,8 +245,8 @@
             android:id="@+id/textInDark"
             android:layout_width="297dp"
             android:layout_height="32dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginLeft="16dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginLeft="14dp"
             android:layout_marginTop="20dp"
             android:text="@string/modoDark"
             android:textColor="@color/btnBackground"
@@ -251,19 +254,18 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageButton
-            android:id="@+id/imageButton7"
+        <Switch
+            android:id="@+id/switch2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="28dp"
-            android:layout_marginEnd="28dp"
-            android:layout_marginRight="28dp"
-            android:adjustViewBounds="true"
-            android:background="#00FFFFFF"
-            android:contentDescription="@string/todo"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="22dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_btn_off" />
+            app:layout_constraintTop_toTopOf="parent" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
