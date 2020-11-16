@@ -26,4 +26,9 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="favorite">Favoritos</string>
     <string name="historic">Histórico</string>
+    <string name="cleanHistoricMessage">Você deseja apagar todo seu histórico?</string>
+    <string name="cleanHistoricConfirm">Apagar</string>
+    <string name="cleanHistoricCancel">Cancelar</string>
+    <string name="delete">Excluir</string>
+    <string name="share">Compartilhar</string>
 </resources>

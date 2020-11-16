@@ -14,7 +14,7 @@ class HistoricAdapter(private val historic : Map<String, List<HistoryDto>>, priv
 
     class HistoricViewHolder(itemView: View, private val applicationContext: Context) : RecyclerView.ViewHolder(itemView){
         fun bindHistoric(date:String, history: List<HistoryDto>){
-            val historicAdapter = HistoryAdapter(history)
+            val historicAdapter = HistoryAdapter(history, applicationContext)
 
             itemView.txt_date.text = date
             itemView.list_history.apply {
