@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.NavHostFragment
+import kotlinx.android.synthetic.main.fragment_search_by_text.*
 
 class SearchByTextFragment : Fragment() {
 
@@ -15,5 +17,12 @@ class SearchByTextFragment : Fragment() {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_search_by_text, container, false)
     }
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
 
+        bt_config.setOnClickListener{
+            NavHostFragment.findNavController(this)
+                .navigate(R.id.action_searchByTextFragment_to_settingsFragment)
+        }
+    }
 }

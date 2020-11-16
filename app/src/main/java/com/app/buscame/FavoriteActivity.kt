@@ -1,12 +1,14 @@
 package com.app.buscame
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.core.app.ActivityCompat
+import androidx.core.app.ActivityOptionsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.app.buscame.dto.ProductDto
 import com.app.buscame.features.favorites.FavoritesManagerJson
 import kotlinx.android.synthetic.main.activity_favorite.*
+import kotlinx.android.synthetic.main.list_view_products.*
 
 class FavoriteActivity : AppCompatActivity() {
 
@@ -15,24 +17,31 @@ class FavoriteActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_favorite)
-
         favoritesManagerJson = FavoritesManagerJson(applicationContext.filesDir.path)
 
         initRecycleView()
+        bt_config.setOnClickListener {
+            openNextActivity()
+        }
     }
 
     private fun initRecycleView(){
-        val favorites = favoritesManagerJson.list()
-        val products = favorites.map { it.product }
-
-        setAdapterOnRecycleView(ProductAdapter(products))
-    }
-
-    private fun setAdapterOnRecycleView(productAdapter: ProductAdapter){
-        list_products.apply {
-            setHasFixedSize(false)
-            layoutManager = LinearLayoutManager(applicationContext)
-            adapter = productAdapter
+        bt_star.setOnCheckedChangeListener { buttonView, isChecked ->
+            setAdapterOnRecycleView(FavoritesAdapter(applicationContext))
         }
     }
+
+    private fun setAdapterOnRecycleView(favoriteAdapter: FavoritesAdapter){
+        list_favorites.apply {
+            setHasFixedSize(true)
+            layoutManager = LinearLayoutManager(applicationContext)
+            adapter = favoriteAdapter
+        }
+    }
+    private fun openNextActivity() {
+        val intent = Intent(this, Settings::class.java)
+        val activityOptionsCompat = ActivityOptionsCompat.makeCustomAnimation(applicationContext, R.anim.move_left, R.anim.move_left)
+        ActivityCompat.startActivities(this, arrayOf(intent), activityOptionsCompat.toBundle())
+    }
+
 }

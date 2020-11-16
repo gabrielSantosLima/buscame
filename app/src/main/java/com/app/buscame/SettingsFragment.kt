@@ -5,6 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.NavHostFragment
+import kotlinx.android.synthetic.main.fragment_search_by_text.*
+import kotlinx.android.synthetic.main.fragment_settings.*
 
 class SettingsFragment : Fragment() {
 
@@ -14,5 +17,13 @@ class SettingsFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_settings, container, false)
+    }
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+
+        imgRunButtton.setOnClickListener{
+            NavHostFragment.findNavController(this)
+                .navigate(R.id.action_settingsFragment_to_aboutFragment)
+        }
     }
 }

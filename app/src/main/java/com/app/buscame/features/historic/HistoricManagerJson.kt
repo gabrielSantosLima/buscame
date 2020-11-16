@@ -77,6 +77,21 @@ class HistoricManagerJson(private val dir: String, private val filename : String
         clearJson(file)
     }
 
+    override fun exists(id: String): Boolean {
+        val historic = list()
+
+        val file = File(dir,filename)
+        val isFileExists = file.exists()
+
+        if(!isFileExists) return false
+
+        val history = historic.find { it.id == id }
+
+        history ?: return false
+
+        return true
+    }
+
     private fun writeJson(file : File, historic: List<HistoryDto>){
         val json = gson.toJson(historic)
         file.writeText(json)

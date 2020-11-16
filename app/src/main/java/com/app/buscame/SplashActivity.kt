@@ -60,7 +60,7 @@ class SplashActivity : AppCompatActivity() {
 
     private fun showMainActivity() {
         val intent = Intent(
-            this@SplashActivity, HistoricActivity::class.java
+            this@SplashActivity, MainActivity::class.java
         )
         startActivity(intent)
         finish()
