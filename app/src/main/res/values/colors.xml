@@ -17,4 +17,5 @@
     <color name="cardBackground">#FFF</color>
     <color name="red">#E02B2B</color>
     <color name="hint">#5C5353</color>
+    <color name="historicBackgroud">#F4F4F4</color>
 </resources>
