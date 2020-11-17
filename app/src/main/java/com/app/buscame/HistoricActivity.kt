@@ -37,6 +37,6 @@ class HistoricActivity : AppCompatActivity(),View.OnClickListener {
     }
 
     override fun onClick(v: View?) {
-        ClearHistoricDialogFragment().show(supportFragmentManager,"ClearHistoricDialogFragment")
+        ClearHistoricDialogFragment(this).show(supportFragmentManager,"ClearHistoricDialogFragment")
     }
 }

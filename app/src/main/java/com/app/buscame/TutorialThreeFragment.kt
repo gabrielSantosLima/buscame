@@ -21,7 +21,7 @@ class TutorialThreeFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
-        btnJump.setOnClickListener{
+        bt_skip.setOnClickListener{
             NavHostFragment.findNavController(this)
                 .navigate(R.id.action_tutorialThreeFragment_to_searchByTextFragment)
         }

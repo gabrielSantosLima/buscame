@@ -2,9 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.app.buscame">
 
-    <uses-feature android:name="android.hardware.camera.any" />
-    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:allowBackup="true"
@@ -13,20 +13,21 @@
         android:roundIcon="@mipmap/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".FavoriteActivity"></activity>
+        <activity android:name=".CameraActivity" />
+        <activity android:name=".FavoriteActivity" />
+        <activity android:name=".MainActivity" />
         <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".TutorialThree" />
-        <activity android:name=".TutorialTwo" />
-        <activity android:name=".TutorialOne" />
-        <activity android:name=".Settings" />
-        <activity android:name=".SearchByText" />
-        <activity android:name=".About" />
+        <activity android:name=".TutorialThreeActivity" />
+        <activity android:name=".TutorialTwoActivity" />
+        <activity android:name=".TutorialOneActivity" />
+        <activity android:name=".SettingsActivity" />
+        <activity android:name=".SearchByTextActivity" />
+        <activity android:name=".AboutActivity" />
 
         <meta-data
             android:name="preloaded_fonts"

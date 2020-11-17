@@ -73,4 +73,9 @@
             android:id="@+id/action_favoriteFragment_to_settingsFragment"
             app:destination="@id/settingsFragment" />
     </fragment>
+    <activity
+        android:id="@+id/cameraActivity"
+        android:name="com.app.buscame.CameraActivity"
+        android:label="activity_camera"
+        tools:layout="@layout/activity_camera" />
 </navigation>
