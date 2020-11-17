@@ -7,7 +7,7 @@ import androidx.core.app.ActivityCompat
 import androidx.core.app.ActivityOptionsCompat
 import kotlinx.android.synthetic.main.activity_favorite.*
 
-class SearchByText : AppCompatActivity() {
+class SearchByTextActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_search_by_text)
@@ -20,7 +20,7 @@ class SearchByText : AppCompatActivity() {
         }
     }
     private fun openNextActivity() {
-        val intent = Intent(this, Settings::class.java)
+        val intent = Intent(this, SettingsActivity::class.java)
         val activityOptionsCompat = ActivityOptionsCompat.makeCustomAnimation(applicationContext, R.anim.move_left, R.anim.move_left)
         ActivityCompat.startActivities(this, arrayOf(intent), activityOptionsCompat.toBundle())
     }

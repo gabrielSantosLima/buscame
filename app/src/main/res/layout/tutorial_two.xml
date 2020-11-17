@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/tutorial"
-    tools:context=".TutorialTwo">
+    tools:context=".TutorialTwoActivity">
 
     <ImageView
         android:id="@+id/imgTutorial"
@@ -51,7 +51,7 @@
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnJump"
+        app:layout_constraintStart_toEndOf="@+id/bt_skip"
         app:layout_constraintTop_toBottomOf="@+id/textTutorial"
         app:srcCompat="@drawable/ic_right_arrow" />
 
@@ -107,7 +107,7 @@
         app:srcCompat="@drawable/ic_point_white" />
 
     <Button
-        android:id="@+id/btnJump"
+        android:id="@+id/bt_skip"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="17dp"

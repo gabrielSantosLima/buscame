@@ -9,4 +9,3 @@ data class HistoryDto(
     val date: Date
 )
 
-// List<HistoryDto>

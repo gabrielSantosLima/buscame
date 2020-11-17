@@ -9,15 +9,17 @@
 
     <ImageView
         android:id="@+id/imgTutorial"
-        android:layout_width="420dp"
+        android:layout_width="0dp"
         android:layout_height="255dp"
-        android:layout_marginTop="171dp"
         android:layout_marginEnd="1dp"
         android:layout_marginRight="1dp"
         android:contentDescription="@string/todo"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.15"
         app:srcCompat="@drawable/ic_tutorial_three" />
 
     <TextView
@@ -31,9 +33,12 @@
         android:text="@string/tutorial3"
         android:textColor="#000000"
         android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgTutorial" />
+        app:layout_constraintTop_toBottomOf="@+id/imgTutorial"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageButton
         android:id="@+id/btnBack"
@@ -44,17 +49,17 @@
         android:layout_marginTop="171dp"
         android:layout_marginEnd="408dp"
         android:layout_marginRight="408dp"
-        android:layout_marginBottom="29dp"
+        android:layout_marginBottom="24dp"
         android:adjustViewBounds="true"
         android:background="#00FFFFFF"
         android:contentDescription="@string/todo"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.091"
+        app:layout_constraintHorizontal_bias="0.034"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textTutorial"
-        app:layout_constraintVertical_bias="0.76"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/ic_left_arrow" />
 
     <ImageView
@@ -109,7 +114,7 @@
         app:srcCompat="@drawable/ic_point_black" />
 
     <Button
-        android:id="@+id/btnJump"
+        android:id="@+id/bt_skip"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="279dp"

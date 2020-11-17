@@ -5,19 +5,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/tutorial"
-    tools:context=".TutorialOne">
+    tools:context=".TutorialOneActivity">
 
     <ImageView
         android:id="@+id/imgTutorial"
-        android:layout_width="420dp"
+        android:layout_width="0dp"
         android:layout_height="255dp"
-        android:layout_marginTop="171dp"
         android:layout_marginEnd="1dp"
         android:layout_marginRight="1dp"
         android:contentDescription="@string/todo"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.15"
         app:srcCompat="@drawable/ic_tutorial_one" />
 
     <TextView
@@ -31,9 +32,12 @@
         android:text="@string/tutorial1"
         android:textColor="#000000"
         android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgTutorial" />
+        app:layout_constraintTop_toBottomOf="@+id/imgTutorial"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageButton
         android:id="@+id/btnAdvance"
@@ -51,7 +55,7 @@
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnJump"
+        app:layout_constraintStart_toEndOf="@+id/bt_skip"
         app:layout_constraintTop_toBottomOf="@+id/textTutorial"
         app:srcCompat="@drawable/ic_right_arrow" />
 
@@ -107,7 +111,7 @@
         app:srcCompat="@drawable/ic_point_white" />
 
     <Button
-        android:id="@+id/btnJump"
+        android:id="@+id/bt_skip"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="17dp"
