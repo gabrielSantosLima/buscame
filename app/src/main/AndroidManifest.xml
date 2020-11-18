@@ -22,9 +22,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".TutorialThreeActivity" />
-        <activity android:name=".TutorialTwoActivity" />
-        <activity android:name=".TutorialOneActivity" />
         <activity android:name=".SettingsActivity" />
         <activity android:name=".SearchByTextActivity" />
         <activity android:name=".AboutActivity" />
