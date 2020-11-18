@@ -43,5 +43,4 @@ class FavoriteActivity : AppCompatActivity() {
         val activityOptionsCompat = ActivityOptionsCompat.makeCustomAnimation(applicationContext, R.anim.move_left, R.anim.move_left)
         ActivityCompat.startActivities(this, arrayOf(intent), activityOptionsCompat.toBundle())
     }
-
 }
