@@ -18,12 +18,4 @@ class SettingsFragment : Fragment() {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_settings, container, false)
     }
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-
-        imgRunButtton.setOnClickListener{
-            NavHostFragment.findNavController(this)
-                .navigate(R.id.action_settingsFragment_to_aboutFragment)
-        }
-    }
 }

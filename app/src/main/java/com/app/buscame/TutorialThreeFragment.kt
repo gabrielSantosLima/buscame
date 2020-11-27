@@ -23,7 +23,7 @@ class TutorialThreeFragment : Fragment() {
 
         bt_skip.setOnClickListener{
             NavHostFragment.findNavController(this)
-                .navigate(R.id.action_tutorialThreeFragment_to_searchByTextFragment)
+                .navigate(R.id.action_tutorialThreeFragment_to_mainActivity2)
         }
     }
 }
