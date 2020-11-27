@@ -1,15 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:id="@+id/favoriteFragment"
-        android:title="Favoritos" />
+    <item
+        android:id="@+id/favoriteFragment2"
+        android:enabled="true"
+        android:title="@string/favorite"/>
 
-    <item android:id="@+id/cameraFragment"
-        android:title="Câmera" />
+    <item
+        android:id="@+id/cameraFragment2"
+        android:enabled="true"
+        android:title="@string/camera"/>
 
-    <item android:id="@+id/searchFragment"
-        android:title="Buscar" />
+    <item
+        android:id="@+id/searchByTextFragment"
+        android:enabled="true"
+        android:title="@string/search"/>
 
-    <item android:id="@+id/historicFragment"
-        android:title="Histórico" />
+    <item
+        android:id="@+id/historicFragment3"
+        android:enabled="true"
+        android:title="@string/historic"/>
 </menu>

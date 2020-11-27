@@ -31,4 +31,6 @@
     <string name="cleanHistoricCancel">Cancelar</string>
     <string name="delete">Excluir</string>
     <string name="share">Compartilhar</string>
+    <string name="camera">Câmera</string>
+    <string name="search">Buscar</string>
 </resources>
