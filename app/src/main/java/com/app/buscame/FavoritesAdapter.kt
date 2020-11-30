@@ -15,6 +15,7 @@ import com.app.buscame.features.favorites.FavoritesManagerJson
 import com.app.buscame.utils.getSubstringOfText
 import com.app.buscame.utils.toPriceFormat
 import kotlinx.android.synthetic.main.list_view_products.view.*
+import java.io.File
 
 class FavoritesAdapter(applicationContext: Context) : RecyclerView.Adapter<FavoritesAdapter.FavoritesViewHolder>(){
 
@@ -40,7 +41,7 @@ class FavoritesAdapter(applicationContext: Context) : RecyclerView.Adapter<Favor
             with(favorite){
                 itemView.txt_title.text = getSubstringOfText(product.title,MAX_TITLE_LENGTH)
                 itemView.txt_description.text = getSubstringOfText(product.description,MAX_DESCRIPTION_LENGTH)
-                itemView.txt_price.text = toPriceFormat(product.price)
+                itemView.txt_price.text = toPriceFormat(product.price!!)
                 itemView.bt_star.tag = favorite
                 if(product.image == null) return
                 itemView.img_product.setImageURI(Uri.fromFile(product.image))
