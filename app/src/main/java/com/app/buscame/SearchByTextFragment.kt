@@ -20,9 +20,5 @@ class SearchByTextFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
-        bt_config.setOnClickListener{
-            NavHostFragment.findNavController(this)
-                .navigate(R.id.action_searchByTextFragment_to_settingsFragment)
         }
-    }
 }

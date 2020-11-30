@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/tutorial"
-    tools:context=".TutorialThreeActivity">
+    tools:context=".TutorialThreeFragment">
 
     <ImageView
         android:id="@+id/imgTutorial"
@@ -39,22 +39,15 @@
         android:id="@+id/btnAdvance"
         android:layout_width="87dp"
         android:layout_height="47dp"
-        android:layout_marginStart="3dp"
-        android:layout_marginLeft="3dp"
-        android:layout_marginTop="171dp"
-        android:layout_marginEnd="408dp"
-        android:layout_marginRight="408dp"
-        android:layout_marginBottom="29dp"
         android:adjustViewBounds="true"
         android:background="#00FFFFFF"
         android:contentDescription="@string/todo"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.091"
+        app:layout_constraintEnd_toStartOf="@+id/bt_skip"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textTutorial"
-        app:layout_constraintVertical_bias="0.76"
+        app:layout_constraintVertical_bias="0.896"
         app:srcCompat="@drawable/ic_left_arrow" />
 
     <ImageView
@@ -112,12 +105,8 @@
         android:id="@+id/bt_skip"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="279dp"
-        android:layout_marginLeft="279dp"
-        android:layout_marginTop="170dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginBottom="29dp"
+        android:layout_marginStart="211dp"
+        android:layout_marginLeft="211dp"
         android:background="#00FFFFFF"
         android:shadowColor="#FFFFFF"
         android:text="@string/btnRun"
@@ -125,8 +114,7 @@
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/btnAdvance"
         app:layout_constraintTop_toBottomOf="@+id/textTutorial"
-        app:layout_constraintVertical_bias="0.75" />
+        app:layout_constraintVertical_bias="0.854" />
 </androidx.constraintlayout.widget.ConstraintLayout>
