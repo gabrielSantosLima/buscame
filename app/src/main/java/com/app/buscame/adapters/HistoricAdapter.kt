@@ -1,12 +1,12 @@
-package com.app.buscame
+package com.app.buscame.adapters
 
 import android.content.Context
-import android.content.pm.ApplicationInfo
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.app.buscame.R
 import com.app.buscame.dto.HistoryDto
 import kotlinx.android.synthetic.main.list_view_historic.view.*
 

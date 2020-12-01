@@ -14,21 +14,19 @@
         android:roundIcon="@mipmap/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity2"></activity>
-        <activity android:name=".LoadingActivity" />
-        <activity android:name=".CameraActivity" />
-        <activity android:name=".FavoriteActivity" />
-        <activity android:name=".MainActivity" />
-        <activity android:name=".SplashActivity">
+        <activity android:name=".ui.MainOpenedActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SettingsActivity" />
-        <activity android:name=".SearchByTextActivity" />
-        <activity android:name=".AboutActivity" />
+        <activity android:name=".ui.LoadingActivity" />
+        <activity android:name=".ui.MainActivity" />
+        <activity android:name=".ui.SplashActivity">
+
+        </activity>
+        <activity android:name=".ui.SettingsActivity" />
+        <activity android:name=".ui.AboutActivity" />
 
         <meta-data
             android:name="preloaded_fonts"

@@ -1,16 +1,16 @@
-package com.app.buscame
+package com.app.buscame.ui
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import com.app.buscame.R
 import com.app.buscame.dto.FavoriteDto
 import com.app.buscame.dto.HistoryDto
 import com.app.buscame.dto.ProductDto
 import com.app.buscame.features.favorites.FavoritesManagerJson
 import com.app.buscame.features.historic.HistoricManagerJson
 import com.app.buscame.utils.randomNumberHex
-import kotlinx.coroutines.delay
 import java.util.*
 
 class SplashActivity : AppCompatActivity() {

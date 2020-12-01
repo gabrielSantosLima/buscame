@@ -2,7 +2,7 @@ package com.app.buscame.utils
 
 import java.util.*
 
-private const val MAX_HEX_LENGTH = 8
+private const val MAX_HEX_LENGTH = 20
 
 fun randomNumberHex() : String {
 
@@ -16,5 +16,5 @@ fun randomNumberHex() : String {
 
     if(hex.length < MAX_HEX_LENGTH) return randomNumberHex()
 
-    return hex.substring(0, MAX_HEX_LENGTH)
+    return hex.substring(0, MAX_HEX_LENGTH) + formatTimeByDefaultPattern(Date())
 }
