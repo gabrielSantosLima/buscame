@@ -2,7 +2,6 @@ package com.app.buscame.features.historic
 
 import com.app.buscame.dto.HistoryDto
 import com.app.buscame.utils.formatDateByDefaultPattern
-import com.app.buscame.utils.formatDateByPattern
 import com.app.buscame.utils.randomNumberHex
 import com.google.gson.Gson
 import java.io.File

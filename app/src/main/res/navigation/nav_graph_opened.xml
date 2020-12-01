@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_opened"
+    app:startDestination="@id/cameraFragment">
+
+    <fragment
+        android:id="@+id/favoriteFragment"
+        android:name="com.app.buscame.fragments.FavoriteFragment"
+        android:label="fragment_favorite"
+        tools:layout="@layout/fragment_favorite" >
+        <action
+            android:id="@+id/action_favoriteFragment_to_cameraFragment"
+            app:destination="@id/cameraFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cameraFragment"
+        android:name="com.app.buscame.fragments.CameraFragment"
+        android:label="fragment_camera"
+        tools:layout="@layout/fragment_camera" >
+        <action
+            android:id="@+id/action_cameraFragment_to_favoriteFragment"
+            app:destination="@id/favoriteFragment" />
+        <action
+            android:id="@+id/action_cameraFragment_to_searchByTextFragment"
+            app:destination="@id/searchByTextFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchByTextFragment"
+        android:name="com.app.buscame.fragments.SearchByTextFragment"
+        android:label="fragment_search_by_text"
+        tools:layout="@layout/fragment_search_by_text" >
+        <action
+            android:id="@+id/action_searchByTextFragment_to_cameraFragment"
+            app:destination="@id/cameraFragment" />
+        <action
+            android:id="@+id/action_searchByTextFragment_to_historicFragment"
+            app:destination="@id/historicFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/historicFragment"
+        android:name="com.app.buscame.fragments.HistoricFragment"
+        android:label="fragment_historic"
+        tools:layout="@layout/fragment_historic" >
+        <action
+            android:id="@+id/action_historicFragment_to_searchByTextFragment"
+            app:destination="@id/searchByTextFragment" />
+    </fragment>
+</navigation>

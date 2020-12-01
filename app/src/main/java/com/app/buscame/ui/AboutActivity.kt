@@ -1,11 +1,12 @@
-package com.app.buscame
+package com.app.buscame.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.app.buscame.R
 
-class LoadingActivity : AppCompatActivity() {
+class AboutActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_loading)
+        setContentView(R.layout.about)
     }
 }

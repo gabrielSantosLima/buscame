@@ -1,26 +1,35 @@
-package com.app.buscame
+package com.app.buscame.fragments
 
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.view.View
-import androidx.appcompat.app.AppCompatActivity
+import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import com.app.buscame.R
 import com.camerakit.CameraKit
 import com.camerakit.CameraKitView
-import kotlinx.android.synthetic.main.activity_camera.*
+import kotlinx.android.synthetic.main.fragment_camera.*
 import java.io.File
 
-class CameraActivity : AppCompatActivity(), View.OnClickListener, CameraKitView.ImageCallback {
+class CameraFragment : Fragment(), View.OnClickListener, CameraKitView.ImageCallback {
 
     private lateinit var cameraKitView: CameraKitView
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_camera)
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        return inflater.inflate(R.layout.fragment_camera, container, false)
+    }
+
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
         prepareCamera(camera)
     }
 
     fun prepareCamera(camera: CameraKitView){
         cameraKitView = camera
-
         bt_face.setOnClickListener { toggleFace() }
         bt_flash.setOnClickListener { toggleFlash() }
         bt_take_picture.setOnClickListener(this)

@@ -1,4 +1,4 @@
-package com.app.buscame
+package com.app.buscame.adapters
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -6,11 +6,9 @@ import android.view.MenuInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.PopupMenu
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.app.buscame.R
 import com.app.buscame.dto.HistoryDto
-import com.app.buscame.utils.formatDateByDefaultPattern
-import com.app.buscame.utils.formatDateByPattern
 import com.app.buscame.utils.formatTimeByDefaultPattern
 import kotlinx.android.synthetic.main.list_view_history.view.*
 

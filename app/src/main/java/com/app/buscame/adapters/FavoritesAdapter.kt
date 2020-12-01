@@ -1,21 +1,18 @@
-package com.app.buscame
+package com.app.buscame.adapters
 
 import android.content.Context
-import android.content.pm.ApplicationInfo
 import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.CompoundButton
-import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
+import com.app.buscame.R
 import com.app.buscame.dto.FavoriteDto
-import com.app.buscame.dto.ProductDto
 import com.app.buscame.features.favorites.FavoritesManagerJson
 import com.app.buscame.utils.getSubstringOfText
 import com.app.buscame.utils.toPriceFormat
 import kotlinx.android.synthetic.main.list_view_products.view.*
-import java.io.File
 
 class FavoritesAdapter(applicationContext: Context) : RecyclerView.Adapter<FavoritesAdapter.FavoritesViewHolder>(){
 

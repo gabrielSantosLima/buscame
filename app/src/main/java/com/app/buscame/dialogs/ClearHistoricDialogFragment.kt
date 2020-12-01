@@ -1,12 +1,12 @@
-package com.app.buscame
+package com.app.buscame.dialogs
 
 import android.app.AlertDialog
-import android.app.Application
 import android.app.Dialog
 import android.content.Context
 import android.content.DialogInterface
 import android.os.Bundle
 import androidx.fragment.app.DialogFragment
+import com.app.buscame.R
 import com.app.buscame.features.historic.HistoricManagerJson
 import com.app.buscame.features.historic.IHistoricManager
 
@@ -20,9 +20,11 @@ class ClearHistoricDialogFragment(val applicationContext: Context) : DialogFragm
         return activity?.let {
             val builder = AlertDialog.Builder(it)
             builder.setMessage(R.string.cleanHistoricMessage)
-                .setPositiveButton(R.string.cleanHistoricConfirm,
+                .setPositiveButton(
+                    R.string.cleanHistoricConfirm,
                     DialogInterface.OnClickListener { _,_ -> historicManagerJson.removeAll() })
-                .setNegativeButton(R.string.cleanHistoricCancel,
+                .setNegativeButton(
+                    R.string.cleanHistoricCancel,
                     DialogInterface.OnClickListener { dialog, id -> })
             builder.create()
         } ?: throw IllegalStateException("Activity cannot be null")
