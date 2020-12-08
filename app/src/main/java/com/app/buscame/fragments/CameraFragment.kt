@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import com.app.buscame.R
 import com.camerakit.CameraKit
 import com.camerakit.CameraKitView
+import kotlinx.android.synthetic.main.activity_main_opened.*
 import kotlinx.android.synthetic.main.fragment_camera.*
 import java.io.File
 
@@ -84,7 +85,7 @@ class CameraFragment : Fragment(), View.OnClickListener, CameraKitView.ImageCall
     }
 
     override fun onImage(cameraKitView: CameraKitView, bytes: ByteArray) {
-        val file = File("image.jpeg").writeBytes(bytes)
-        //TODO Chamada a API
+        val file = createTempFile()
+        file.writeBytes(bytes)
     }
 }
