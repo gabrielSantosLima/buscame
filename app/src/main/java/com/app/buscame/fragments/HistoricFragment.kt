@@ -25,6 +25,7 @@ class HistoricFragment : Fragment(),View.OnClickListener {
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
         super.onCreate(savedInstanceState)
         bt_clear_historic.setOnClickListener(this)
         historicManagerJson = HistoricManagerJson(context?.applicationContext?.filesDir?.path!!)
@@ -33,7 +34,6 @@ class HistoricFragment : Fragment(),View.OnClickListener {
 
     private fun initRecycleView() {
         val historic = historicManagerJson.groupByDate()
-
         setAdapterOnRecycleView(HistoricAdapter(historic,context?.applicationContext!!))
     }
 

@@ -25,6 +25,7 @@ class FavoriteFragment : Fragment() {
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
         super.onCreate(savedInstanceState)
         favoritesManagerJson = FavoritesManagerJson(context?.applicationContext?.filesDir?.path!!)
         initRecycleView()
@@ -32,9 +33,7 @@ class FavoriteFragment : Fragment() {
 
 
     private fun initRecycleView(){
-        bt_star.setOnCheckedChangeListener { buttonView, isChecked ->
-            setAdapterOnRecycleView(FavoritesAdapter(context?.applicationContext!!))
-        }
+        setAdapterOnRecycleView(FavoritesAdapter(context?.applicationContext!!))
     }
 
     private fun setAdapterOnRecycleView(favoriteAdapter: FavoritesAdapter){
