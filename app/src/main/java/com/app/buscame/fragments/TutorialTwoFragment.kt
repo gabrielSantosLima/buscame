@@ -9,14 +9,11 @@ import androidx.navigation.fragment.NavHostFragment
 import com.app.buscame.R
 import kotlinx.android.synthetic.main.fragment_tutorial_two.btnAdvance
 
-
 class TutorialTwoFragment : Fragment() {
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_tutorial_two, container, false)
     }
 

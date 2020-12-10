@@ -1,20 +1,30 @@
 package com.app.buscame.fragments
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.net.toFile
+import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.fragment.findNavController
 import com.app.buscame.R
+import com.app.buscame.features.importImage.ImportImage
 import com.camerakit.CameraKit
 import com.camerakit.CameraKitView
 import kotlinx.android.synthetic.main.activity_main_opened.*
 import kotlinx.android.synthetic.main.fragment_camera.*
 import java.io.File
+import java.io.FileInputStream
+import java.io.InputStream
 
-class CameraFragment : Fragment(), View.OnClickListener, CameraKitView.ImageCallback {
+class CameraFragment : Fragment(), CameraKitView.ImageCallback {
 
     private lateinit var cameraKitView: CameraKitView
+    private lateinit var importImage: ImportImage
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -26,14 +36,33 @@ class CameraFragment : Fragment(), View.OnClickListener, CameraKitView.ImageCall
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+        super.onCreate(savedInstanceState)
         prepareCamera(camera)
+        activity?.bottom_nav?.visibility = View.VISIBLE
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if(requestCode == ImportImage.REQUEST_CODE_IMPORT_IMAGE && data?.data != null){
+            val inputStream = context?.contentResolver?.openInputStream(data?.data!!)
+            val image = inputStream?.readBytes()
+            val bundle = bundleOf("image" to image)
+            openConfirmFragment(bundle)
+        }
     }
 
     fun prepareCamera(camera: CameraKitView){
         cameraKitView = camera
+        importImage = ImportImage(this)
+
         bt_face.setOnClickListener { toggleFace() }
         bt_flash.setOnClickListener { toggleFlash() }
-        bt_take_picture.setOnClickListener(this)
+        bt_take_picture.setOnClickListener { takePicture() }
+        bt_import.setOnClickListener { openGallery() }
+    }
+
+    fun openGallery(){
+        importImage.import()
     }
 
     fun toggleFlash(){
@@ -49,6 +78,10 @@ class CameraFragment : Fragment(), View.OnClickListener, CameraKitView.ImageCall
 
     fun toggleFace(){
         cameraKitView.toggleFacing()
+    }
+
+    fun takePicture(){
+        cameraKitView.captureImage(this)
     }
 
     override fun onStart() {
@@ -80,12 +113,13 @@ class CameraFragment : Fragment(), View.OnClickListener, CameraKitView.ImageCall
         cameraKitView.onRequestPermissionsResult(requestCode, permissions, grantResults)
     }
 
-    override fun onClick(v: View?) {
-        cameraKitView.captureImage(this)
+    override fun onImage(cameraKitView: CameraKitView, bytes: ByteArray) {
+        val bundle = bundleOf("image" to bytes)
+        openConfirmFragment(bundle)
     }
 
-    override fun onImage(cameraKitView: CameraKitView, bytes: ByteArray) {
-        val file = createTempFile()
-        file.writeBytes(bytes)
+    fun openConfirmFragment(bundle: Bundle){
+        NavHostFragment.findNavController(this)
+            .navigate(R.id.action_cameraFragment_to_confirmationFragment, bundle)
     }
 }

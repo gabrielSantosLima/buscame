@@ -25,6 +25,12 @@
         <action
             android:id="@+id/action_cameraFragment_to_searchByTextFragment"
             app:destination="@id/searchByTextFragment" />
+        <action
+            android:id="@+id/action_cameraFragment_to_confirmationFragment"
+            app:destination="@id/confirmationFragment" />
+        <action
+            android:id="@+id/action_cameraFragment_to_confirmationFragment2"
+            app:destination="@id/confirmationFragment" />
     </fragment>
     <fragment
         android:id="@+id/searchByTextFragment"
@@ -46,5 +52,17 @@
         <action
             android:id="@+id/action_historicFragment_to_searchByTextFragment"
             app:destination="@id/searchByTextFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/confirmationFragment"
+        android:name="com.app.buscame.fragments.ConfirmationFragment"
+        android:label="fragment_confirmation"
+        tools:layout="@layout/fragment_confirmation" >
+        <action
+            android:id="@+id/action_confirmationFragment_to_searchByTextFragment"
+            app:destination="@id/searchByTextFragment" />
+        <action
+            android:id="@+id/action_confirmationFragment_to_cameraFragment"
+            app:destination="@id/cameraFragment" />
     </fragment>
 </navigation>
