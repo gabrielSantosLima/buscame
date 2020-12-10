@@ -6,13 +6,15 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.os.bundleOf
 import androidx.navigation.fragment.NavHostFragment
 import com.app.buscame.R
-import kotlinx.android.synthetic.main.activity_main_opened.*
 import kotlinx.android.synthetic.main.fragment_confirmation.*
 import java.io.File
 
-class ConfirmationFragment : Fragment(), View.OnClickListener {
+class ConfirmationFragment : Fragment() {
+
+    private lateinit var image : File
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -24,13 +26,14 @@ class ConfirmationFragment : Fragment(), View.OnClickListener {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         super.onCreate(savedInstanceState)
-        bt_close.setOnClickListener(this)
+        bt_close.setOnClickListener{ close() }
+        bt_analyse.setOnClickListener{ analyse() }
         setImage()
     }
 
     fun setImage(){
-        val fileImage = getImageFromArguments()
-        img.setImageURI(Uri.fromFile(fileImage))
+        image = getImageFromArguments()
+        img.setImageURI(Uri.fromFile(image))
     }
 
     fun getImageFromArguments() : File {
@@ -40,8 +43,14 @@ class ConfirmationFragment : Fragment(), View.OnClickListener {
         return fileImage
     }
 
-    override fun onClick(v: View?) {
+    private fun close(){
         NavHostFragment.findNavController(this)
             .navigate(R.id.action_confirmationFragment_to_cameraFragment)
+    }
+
+    private fun analyse(){
+        val bundle = bundleOf("image" to image)
+        NavHostFragment.findNavController(this)
+            .navigate(R.id.action_confirmationFragment_to_searchByTextFragment, bundle)
     }
 }
