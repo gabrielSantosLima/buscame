@@ -40,8 +40,6 @@ class FavoritesAdapter(applicationContext: Context) : RecyclerView.Adapter<Favor
                 itemView.txt_description.text = getSubstringOfText(product.description,MAX_DESCRIPTION_LENGTH)
                 itemView.txt_price.text = toPriceFormat(product.price!!)
                 itemView.bt_star.tag = favorite
-                if(product.image == null) return
-                itemView.img_product.setImageURI(Uri.fromFile(product.image))
             }
         }
 
@@ -53,7 +51,9 @@ class FavoritesAdapter(applicationContext: Context) : RecyclerView.Adapter<Favor
             }
         }
 
-        fun removeFavorites(id : String) = favoritesManagerJson.remove(id)
+        fun removeFavorites(id : String) {
+            favoritesManagerJson.remove(id)
+        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FavoritesViewHolder {
