@@ -1,25 +1,19 @@
 package com.app.buscame.fragments
 
 import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.net.toFile
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.fragment.findNavController
 import com.app.buscame.R
 import com.app.buscame.features.importImage.ImportImage
 import com.camerakit.CameraKit
 import com.camerakit.CameraKitView
 import kotlinx.android.synthetic.main.activity_main_opened.*
 import kotlinx.android.synthetic.main.fragment_camera.*
-import java.io.File
-import java.io.FileInputStream
-import java.io.InputStream
 
 class CameraFragment : Fragment(), CameraKitView.ImageCallback {
 
