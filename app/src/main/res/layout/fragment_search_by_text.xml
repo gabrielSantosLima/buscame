@@ -117,6 +117,8 @@
         android:id="@+id/ipt_search"
         android:layout_width="350dp"
         android:layout_height="38dp"
+        android:layout_margin="8dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/search_input"
         android:elevation="4dp"
         android:ems="10"
@@ -129,7 +131,27 @@
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nav"
-        app:layout_constraintVertical_bias="0.027" />
+        app:layout_constraintVertical_bias="0.127" />
+
+    <EditText
+        android:id="@+id/ipt_filter"
+        android:layout_width="350dp"
+        android:layout_height="38dp"
+        android:layout_margin="8px"
+        android:background="@color/noConnection"
+        android:elevation="4dp"
+        android:ems="10"
+        android:enabled="false"
+        android:fontFamily="@font/roboto"
+        android:hint="Pesquisar por um filtro..."
+        android:inputType="textPersonName"
+        android:padding="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/ipt_search"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nav"
+        app:layout_constraintVertical_bias="0.406" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/list_products"

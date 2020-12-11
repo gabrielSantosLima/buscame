@@ -38,7 +38,7 @@ class FavoriteFragment : Fragment() {
     }
 
     private fun initRecycleView(){
-        setAdapterOnRecycleView(FavoritesAdapter(context?.applicationContext!!))
+        setAdapterOnRecycleView(FavoritesAdapter(this))
     }
 
     private fun setAdapterOnRecycleView(favoriteAdapter: FavoritesAdapter){
