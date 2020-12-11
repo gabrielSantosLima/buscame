@@ -10,9 +10,21 @@ import retrofit2.http.Query
 interface IProductSearchService {
 
     @POST("image")
-    fun searchByImage(@Body image: RequestBody): Call<List<ProductDto>>
+    fun searchByImage(
+        @Body image: RequestBody,
+        @Query("brandName") brandName: String = "",
+        @Query("price") price: Double = 0.0,
+        @Query("page") page: Int = 1,
+        @Query("url") url: String = ""
+    ): Call<List<ProductDto>>
 
     @POST("text")
-    fun searchByText(@Query("text") text: String): Call<List<ProductDto>>
+    fun searchByText(
+        @Query("text") text: String,
+        @Query("brandName") brandName: String = "",
+        @Query("price") price: Double = 0.0,
+        @Query("page") page: Int = 1,
+        @Query("url") url: String = ""
+    ): Call<List<ProductDto>>
 }
 
