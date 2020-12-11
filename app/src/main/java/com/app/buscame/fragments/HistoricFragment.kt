@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.NavHostFragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.app.buscame.dialogs.ClearHistoricDialogFragment
 import com.app.buscame.adapters.HistoricAdapter
@@ -28,8 +29,14 @@ class HistoricFragment : Fragment(),View.OnClickListener {
         super.onActivityCreated(savedInstanceState)
         super.onCreate(savedInstanceState)
         bt_clear_historic.setOnClickListener(this)
+        bt_config.setOnClickListener { toConfig() }
         historicManagerJson = HistoricManagerJson(context?.applicationContext?.filesDir?.path!!)
         initRecycleView()
+    }
+
+    private fun toConfig() {
+        NavHostFragment.findNavController(this)
+            .navigate(R.id.action_historicFragment_to_settingsFragment)
     }
 
     private fun initRecycleView() {

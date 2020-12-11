@@ -1,10 +1,11 @@
 package com.app.buscame.features.share
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import com.app.buscame.dto.ProductDto
 
-class ShareMessage(private val appCompatActivity: AppCompatActivity, private val title: String) : IShareMessage{
+class ShareMessage(private val context: Context, private val title: String) : IShareMessage{
 
     override fun shareMessage(text: String){
         val sendIntent = Intent().apply {
@@ -14,7 +15,7 @@ class ShareMessage(private val appCompatActivity: AppCompatActivity, private val
         }
 
         val shareIntent =  Intent.createChooser(sendIntent, title)
-        appCompatActivity.startActivity(shareIntent)
+        context.startActivity(shareIntent)
     }
 
     override fun shareProduct(productDto: ProductDto) {

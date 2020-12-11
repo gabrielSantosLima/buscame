@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/settings"
-    tools:context=".ui.AboutActivity">
+    android:background="@color/settings">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -20,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageButton
-            android:id="@+id/imgBack"
+            android:id="@+id/bt_back"
             android:layout_width="26dp"
             android:layout_height="32dp"
             android:layout_marginStart="4dp"

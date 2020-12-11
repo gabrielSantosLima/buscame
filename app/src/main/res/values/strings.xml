@@ -16,7 +16,7 @@
     <string name="sons">Sons</string>
     <string name="som_off_on">Permite desativar as opções de áudio do aplicativo</string>
     <string name="dark">Modo Escuro</string>
-    <string name="modoDark">Este é um exemplo de configuração em quem o usuário poderá ativar ou desativar esta opção</string>
+    <string name="modoDark">Clique para trocar o tema do aplicativo</string>
     <string name="appearance">Aparência</string>
     <string name="aboutApp">Sobre o aplicativo</string>
     <string name="settings">Configurações</string>
