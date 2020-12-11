@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_favoriteFragment_to_cameraFragment"
             app:destination="@id/cameraFragment" />
+        <action
+            android:id="@+id/action_favoriteFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
     </fragment>
     <fragment
         android:id="@+id/cameraFragment"
@@ -43,6 +46,9 @@
         <action
             android:id="@+id/action_searchByTextFragment_to_historicFragment"
             app:destination="@id/historicFragment" />
+        <action
+            android:id="@+id/action_searchByTextFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
     </fragment>
     <fragment
         android:id="@+id/historicFragment"
@@ -52,6 +58,9 @@
         <action
             android:id="@+id/action_historicFragment_to_searchByTextFragment"
             app:destination="@id/searchByTextFragment" />
+        <action
+            android:id="@+id/action_historicFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
     </fragment>
     <fragment
         android:id="@+id/confirmationFragment"
@@ -64,5 +73,30 @@
         <action
             android:id="@+id/action_confirmationFragment_to_cameraFragment"
             app:destination="@id/cameraFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.app.buscame.fragments.SettingsFragment"
+        android:label="SettingsFragment" >
+        <action
+            android:id="@+id/action_settingsFragment_to_searchByTextFragment"
+            app:destination="@id/searchByTextFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_historicFragment"
+            app:destination="@id/historicFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_favoriteFragment"
+            app:destination="@id/favoriteFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_aboutFragment"
+            app:destination="@id/aboutFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.app.buscame.fragments.AboutFragment"
+        android:label="AboutFragment" >
+        <action
+            android:id="@+id/action_aboutFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
     </fragment>
 </navigation>

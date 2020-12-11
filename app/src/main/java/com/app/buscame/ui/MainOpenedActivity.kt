@@ -1,7 +1,10 @@
 package com.app.buscame.ui
 
+import android.content.Context
+import android.net.ConnectivityManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.NavigationUI
@@ -14,6 +17,19 @@ class MainOpenedActivity : AppCompatActivity(){
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_opened)
         setupBottomNavigation(nav_host.findNavController())
+        verifyIfHasConnection()
+    }
+
+    private fun verifyIfHasConnection(){
+//        val cm = applicationContext.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+//        val activeNetwork = cm.activeNetworkInfo
+//        val isConnected = activeNetwork?.isConnected
+//
+//        if(!isConnected!!) {
+//            no_connection.visibility = View.VISIBLE
+//        }else{
+//            no_connection.visibility = View.INVISIBLE
+//        }
     }
 
     private fun setupBottomNavigation(navController: NavController) {

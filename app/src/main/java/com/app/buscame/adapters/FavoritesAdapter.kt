@@ -1,7 +1,6 @@
 package com.app.buscame.adapters
 
 import android.content.Context
-import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,11 +9,12 @@ import androidx.recyclerview.widget.RecyclerView
 import com.app.buscame.R
 import com.app.buscame.dto.FavoriteDto
 import com.app.buscame.features.favorites.FavoritesManagerJson
+import com.app.buscame.features.share.ShareMessage
 import com.app.buscame.utils.getSubstringOfText
 import com.app.buscame.utils.toPriceFormat
-import kotlinx.android.synthetic.main.list_view_products.view.*
+import kotlinx.android.synthetic.main.list_view_favorites.view.*
 
-class FavoritesAdapter(applicationContext: Context) : RecyclerView.Adapter<FavoritesAdapter.FavoritesViewHolder>(){
+class FavoritesAdapter(val applicationContext: Context) : RecyclerView.Adapter<FavoritesAdapter.FavoritesViewHolder>(){
 
     private val favoritesManagerJson = FavoritesManagerJson(applicationContext.filesDir.path)
     private var favorites: List<FavoriteDto>
@@ -23,15 +23,17 @@ class FavoritesAdapter(applicationContext: Context) : RecyclerView.Adapter<Favor
         favorites = favoritesManagerJson.list()
     }
 
-    class FavoritesViewHolder(itemView: View, val favoritesManagerJson: FavoritesManagerJson) :
+    class FavoritesViewHolder(itemView: View, val favoritesManagerJson: FavoritesManagerJson, val applicationContext: Context) :
         RecyclerView.ViewHolder(itemView),
-        CompoundButton.OnCheckedChangeListener
+        CompoundButton.OnCheckedChangeListener,
+            View.OnClickListener
     {
         private val MAX_DESCRIPTION_LENGTH = 33
         private val MAX_TITLE_LENGTH = 32
 
         init {
             itemView.bt_star.setOnCheckedChangeListener(this)
+            itemView.bt_share.setOnClickListener(this)
         }
 
         fun bindFavorite(favorite : FavoriteDto){
@@ -40,6 +42,7 @@ class FavoritesAdapter(applicationContext: Context) : RecyclerView.Adapter<Favor
                 itemView.txt_description.text = getSubstringOfText(product.description,MAX_DESCRIPTION_LENGTH)
                 itemView.txt_price.text = toPriceFormat(product.price!!)
                 itemView.bt_star.tag = favorite
+                itemView.bt_share.tag = favorite
             }
         }
 
@@ -54,11 +57,17 @@ class FavoritesAdapter(applicationContext: Context) : RecyclerView.Adapter<Favor
         fun removeFavorites(id : String) {
             favoritesManagerJson.remove(id)
         }
+
+        override fun onClick(v: View?) {
+            val shareMessage = ShareMessage(applicationContext, "Compartilhar produto")
+            val favorite = v?.tag as FavoriteDto
+            shareMessage.shareProduct(favorite.product)
+        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FavoritesViewHolder {
-        val view =  LayoutInflater.from(parent.context).inflate(R.layout.list_view_products, parent, false)
-        return FavoritesViewHolder(view, favoritesManagerJson)
+        val view =  LayoutInflater.from(parent.context).inflate(R.layout.list_view_favorites, parent, false)
+        return FavoritesViewHolder(view, favoritesManagerJson, applicationContext)
     }
 
     override fun getItemCount(): Int = favorites.size
