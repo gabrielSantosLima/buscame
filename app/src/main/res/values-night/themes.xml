@@ -1,29 +1,29 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
-
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
     <style name="AppTheme" parent="Theme.AppCompat.DayNight.DarkActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
         <item name="yellow">#FFE603</item>
         <item name="tutorial">#FFFFBA</item>
         <item name="btnFont">#646161</item>
-        <item name="btnBackground">#000000</item>
-        <item name="header">#FFFFFF</item>
-        <item name="settings">#EAEAEA</item>
-        <item name="black">#000000</item>
-        <item name="white">#FFF</item>
+        <item name="btnBackground">#FFFFFF</item>
+        <item name="header">#333333</item>
+        <item name="settings">#302B2B</item>
+        <item name="black">#FFFFFF</item>
+        <item name="white">#FFFFFF</item>
         <item name="shadow">#40000000</item>
-        <item name="backgroundActivity">#FFFFFF</item>
-        <item name="inputSearch">#FFFFFF</item>
-        <item name="cardBackground">#FFFFFF</item>
+        <item name="backgroundActivity">#302B2B</item>
+        <item name="inputSearch">#302B2B</item>
+        <item name="cardBackground">#3D3D3D</item>
         <item name="red">#E02B2B</item>
-        <item name="hint">#5C5353</item>
-        <item name="historicBackgroud">#F4F4F4</item>
+        <item name="hint">#FFFFFF</item>
+        <item name="historicBackgroud">#8F8F88</item>
         <item name="confirmation">#00B200</item>
         <item name="noConnection">#59BCBCBC</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
-
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
     <style name="AppTheme.PopupOverlay" parent="Theme.AppCompat.Light" />
 </resources>

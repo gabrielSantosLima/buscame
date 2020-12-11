@@ -5,14 +5,14 @@
     android:id="@+id/layout"
     android:layout_width="wrap_content"
     android:layout_height="match_parent"
-    android:background="@color/background"
+    android:background="?backgroundActivity"
     tools:context=".fragments.HistoricFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout3"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:background="@color/background"
+        android:background="?backgroundActivity"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -91,7 +91,7 @@
                 android:padding="4dp"
                 android:text="Limpar histórico"
                 android:textAllCaps="true"
-                android:textColor="@color/white"
+                android:textColor="?white"
                 android:textSize="14sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"

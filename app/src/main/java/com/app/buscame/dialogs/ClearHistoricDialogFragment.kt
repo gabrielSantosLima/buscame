@@ -22,10 +22,14 @@ class ClearHistoricDialogFragment(val applicationContext: Context) : DialogFragm
             builder.setMessage(R.string.cleanHistoricMessage)
                 .setPositiveButton(
                     R.string.cleanHistoricConfirm
-                ) { _, _ -> historicManagerJson.removeAll() }
+                ) { _, _ ->
+                    historicManagerJson.removeAll()
+                }
                 .setNegativeButton(
                     R.string.cleanHistoricCancel
-                ) { dialog, id -> }
+                ) { dialog, id ->
+
+                }
             builder.create()
         } ?: throw IllegalStateException("Activity cannot be null")
     }

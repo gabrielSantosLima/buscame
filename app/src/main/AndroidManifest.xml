@@ -20,7 +20,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.MainActivity" />
-        <activity android:name=".ui.MainOpenedActivity"/>
+        <activity android:name=".ui.MainOpenedActivity" android:windowSoftInputMode="adjustNothing"/>
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />

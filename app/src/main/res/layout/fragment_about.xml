@@ -4,12 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/settings">
+    android:background="?settings">
 
+
+    <TextView
+        android:id="@+id/imgTeam2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto"
+        android:text="@string/by_equipe_buscame"
+        android:textColor="?black"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.97" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/layoutHeader"
-        android:layout_width="409dp"
+        android:layout_width="0dp"
         android:layout_height="75dp"
         android:background="@drawable/header_about"
         android:padding="10dp"
@@ -40,7 +55,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/roboto"
             android:text="@string/information"
-            android:textColor="#000000"
+            android:textColor="?black"
             android:textSize="30sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -70,7 +85,7 @@
             android:layout_marginTop="12dp"
             android:fontFamily="@font/roboto"
             android:text="BuscaMe No GitHub"
-            android:textColor="@color/btnBackground"
+            android:textColor="?btnBackground"
             android:textSize="16sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/imageView3"
@@ -113,11 +128,11 @@
 
         <TextView
             android:id="@+id/textView15"
-            android:layout_width="318dp"
+            android:layout_width="284dp"
             android:layout_height="24dp"
             android:fontFamily="@font/roboto"
             android:text="Desenvolvedores"
-            android:textColor="@color/btnBackground"
+            android:textColor="?btnBackground"
             android:textSize="16sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -129,15 +144,11 @@
             android:id="@+id/imageView7"
             android:layout_width="40dp"
             android:layout_height="35dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginLeft="32dp"
-            android:layout_marginEnd="14dp"
-            android:layout_marginRight="14dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/textView15"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.478"
+            app:layout_constraintVertical_bias="0.361"
             app:srcCompat="@drawable/ic_desenvolvedores" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -149,7 +160,7 @@
         android:layout_marginBottom="16dp"
         android:fontFamily="@font/roboto"
         android:text="Classifique Nosso App Na PlayStory!"
-        android:textColor="@color/btnBackground"
+        android:textColor="?btnBackground"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/layoutHeader1"
@@ -167,7 +178,7 @@
         android:layout_marginBottom="14dp"
         android:fontFamily="@font/roboto"
         android:text="BuscaMe No Notion"
-        android:textColor="@color/btnBackground"
+        android:textColor="?btnBackground"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/layoutHeader2"
@@ -186,7 +197,7 @@
         android:layout_marginRight="1dp"
         android:fontFamily="@font/roboto"
         android:text="Versão 1.0"
-        android:textColor="@color/btnBackground"
+        android:textColor="?btnBackground"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"

@@ -4,13 +4,13 @@
     android:id="@+id/card"
     android:layout_width="match_parent"
     android:layout_height="48dp"
-    android:background="@color/historicBackgroud"
-    app:cardBackgroundColor="@color/historicBackgroud">
+    android:background="?historicBackgroud"
+    app:cardBackgroundColor="?historicBackgroud">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/historicBackgroud"
+        android:background="?historicBackgroud"
         android:gravity="center"
         android:orientation="horizontal"
         android:padding="8dp">
@@ -23,7 +23,7 @@
             android:fontFamily="@font/roboto"
             android:gravity="center"
             android:text="15:50"
-            android:textColor="@color/black"
+            android:textColor="?black"
             android:textSize="12sp" />
 
         <TextView
@@ -34,9 +34,9 @@
             android:fontFamily="@font/roboto"
             android:gravity="center|center_vertical"
             android:text="Computador"
-            android:textColor="@color/black"
+            android:textColor="?black"
             android:textSize="16sp"
-            android:textStyle="normal" />
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/txt_site"
@@ -46,7 +46,7 @@
             android:fontFamily="@font/roboto"
             android:gravity="start|center_vertical"
             android:text="www.facebook.com"
-            android:textColor="@color/hint"
+            android:textColor="?black"
             android:textSize="14sp" />
 
         <Button
