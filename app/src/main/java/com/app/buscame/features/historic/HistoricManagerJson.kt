@@ -12,9 +12,6 @@ class HistoricManagerJson(private val dir: String, private val filename : String
 
     override fun save(history: HistoryDto) {
 
-        history.id = randomNumberHex()
-
-        //Gravar aquivo
         val file = File(dir,filename)
         val isCreatedFile = file.createNewFile()
 

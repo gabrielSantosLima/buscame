@@ -14,10 +14,6 @@ class FavoritesManagerJson(private val dir: String, private val filename : Strin
         val file = File(dir,filename)
         val isCreatedFile = file.createNewFile()
 
-        val randomHex = randomNumberHex()
-        favorite.id = randomHex
-        favorite.product.id = randomHex
-
         if(isCreatedFile){
             writeJson(file, listOf(favorite))
             return

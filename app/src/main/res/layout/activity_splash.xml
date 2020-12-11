@@ -37,11 +37,12 @@
         android:text="@string/by_equipe_buscame"
         android:textColor="#000000"
         android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imgBee"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/imgBee"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgBee" />
+        app:layout_constraintTop_toBottomOf="@+id/textSplash"
+        app:layout_constraintVertical_bias="0.959" />
 
     <ImageView
         android:id="@+id/imgHandbag"
@@ -56,7 +57,7 @@
         android:contentDescription="@string/todo"
         app:layout_constraintBottom_toTopOf="@+id/textSplash"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.562"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_handbag" />

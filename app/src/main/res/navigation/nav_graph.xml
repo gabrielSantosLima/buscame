@@ -11,11 +11,11 @@
         android:label="fragment_tutorial_two"
         tools:layout="@layout/fragment_tutorial_two" >
         <action
+            android:id="@+id/action_tutorialTwoFragment_to_mainActivityOpened"
+            app:destination="@id/mainActivityOpened" />
+        <action
             android:id="@+id/action_tutorialTwoFragment_to_tutorialThreeFragment"
             app:destination="@id/tutorialThreeFragment" />
-        <action
-            android:id="@+id/action_tutorialTwoFragment_to_tutorialOneFragment"
-            app:destination="@id/tutorialOneFragment" />
     </fragment>
     <fragment
         android:id="@+id/tutorialThreeFragment"
@@ -23,10 +23,7 @@
         android:label="fragment_tutorial_three"
         tools:layout="@layout/fragment_tutorial_three" >
         <action
-            android:id="@+id/action_tutorialThreeFragment_to_tutorialTwoFragment"
-            app:destination="@id/tutorialTwoFragment" />
-        <action
-            android:id="@+id/action_tutorialThreeFragment_to_mainActivity2"
+            android:id="@+id/action_tutorialThreeFragment_to_mainActivityOpened"
             app:destination="@id/mainActivityOpened" />
     </fragment>
     <fragment
@@ -35,7 +32,10 @@
         android:label="fragment_tutorial_one"
         tools:layout="@layout/fragment_tutorial_one" >
         <action
-            android:id="@+id/action_tutorialOneFragment2_to_tutorialTwoFragment"
+            android:id="@+id/action_tutorialOneFragment_to_mainActivityOpened"
+            app:destination="@id/mainActivityOpened" />
+        <action
+            android:id="@+id/action_tutorialOneFragment_to_tutorialTwoFragment"
             app:destination="@id/tutorialTwoFragment" />
     </fragment>
     <activity

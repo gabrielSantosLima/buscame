@@ -15,16 +15,16 @@ class TutorialThreeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_tutorial_three, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+        super.onCreate(savedInstanceState)
 
-        bt_skip.setOnClickListener{
+        bt_start.setOnClickListener{
             NavHostFragment.findNavController(this)
-                .navigate(R.id.action_tutorialThreeFragment_to_mainActivity2)
+                .navigate(R.id.action_tutorialThreeFragment_to_mainActivityOpened)
         }
     }
 }

@@ -39,24 +39,36 @@
         app:layout_constraintTop_toBottomOf="@+id/imgTutorial"
         app:layout_constraintVertical_bias="0.0" />
 
+    <Button
+        android:id="@+id/bt_skip"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:background="#00FFFFFF"
+        android:shadowColor="#FFFFFF"
+        android:text="@string/btnAdvance"
+        android:textColor="@color/btnFont"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.099"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.956" />
+
     <ImageButton
         android:id="@+id/btnAdvance"
-        android:layout_width="87dp"
-        android:layout_height="47dp"
-        android:layout_marginStart="213dp"
-        android:layout_marginLeft="213dp"
-        android:layout_marginTop="200dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginBottom="24dp"
+        android:layout_width="75dp"
+        android:layout_height="35dp"
         android:adjustViewBounds="true"
         android:background="#00FFFFFF"
         android:contentDescription="@string/todo"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/bt_skip"
-        app:layout_constraintTop_toBottomOf="@+id/textTutorial"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.956"
         app:srcCompat="@drawable/ic_right_arrow" />
 
     <ImageView
@@ -110,23 +122,4 @@
         app:layout_constraintTop_toBottomOf="@+id/textTutorial"
         app:srcCompat="@drawable/ic_point_white" />
 
-    <Button
-        android:id="@+id/bt_skip"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="17dp"
-        android:layout_marginLeft="17dp"
-        android:layout_marginTop="200dp"
-        android:layout_marginEnd="316dp"
-        android:layout_marginRight="316dp"
-        android:layout_marginBottom="24dp"
-        android:background="#00FFFFFF"
-        android:shadowColor="#FFFFFF"
-        android:text="@string/btnAdvance"
-        android:textColor="@color/btnFont"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textTutorial" />
 </androidx.constraintlayout.widget.ConstraintLayout>

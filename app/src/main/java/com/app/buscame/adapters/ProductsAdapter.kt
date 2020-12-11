@@ -1,20 +1,18 @@
 package com.app.buscame.adapters
 
-import android.graphics.Bitmap
-import android.graphics.BitmapFactory
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.CompoundButton
-import android.widget.ImageView
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import coil.api.load
 import com.app.buscame.R
 import com.app.buscame.dto.FavoriteDto
+import com.app.buscame.dto.HistoryDto
 import com.app.buscame.dto.ProductDto
 import com.app.buscame.features.favorites.FavoritesManagerJson
+import com.app.buscame.features.historic.HistoricManagerJson
 import com.app.buscame.features.redirectToPage.RedirectToPage
 import com.app.buscame.features.share.ShareMessage
 import com.app.buscame.utils.getSubstringOfText
@@ -26,11 +24,6 @@ import kotlinx.android.synthetic.main.list_view_products.view.img_product
 import kotlinx.android.synthetic.main.list_view_products.view.txt_description
 import kotlinx.android.synthetic.main.list_view_products.view.txt_price
 import kotlinx.android.synthetic.main.list_view_products.view.txt_title
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
-import okhttp3.*
-import java.io.IOException
-import java.net.URL
 import java.util.*
 
 class ProductsAdapter(val products: List<ProductDto>, val fragment: Fragment) : RecyclerView.Adapter<ProductsAdapter.ProductsViewHolder>(){
@@ -53,6 +46,7 @@ class ProductsAdapter(val products: List<ProductDto>, val fragment: Fragment) : 
         CompoundButton.OnCheckedChangeListener,
         View.OnClickListener
     {
+        private val historicManagerJson = HistoricManagerJson(fragment.requireContext().filesDir.path)
         private val MAX_DESCRIPTION_LENGTH = 33
         private val MAX_TITLE_LENGTH = 32
 
@@ -78,6 +72,12 @@ class ProductsAdapter(val products: List<ProductDto>, val fragment: Fragment) : 
             val product = v.tag as ProductDto
             val redirectToPage = RedirectToPage(fragment)
             redirectToPage.redirect(product.url)
+            historicManagerJson.save(HistoryDto(
+                product.id,
+                product.term,
+                product.url,
+                Date()
+            ))
         }
 
         override fun onCheckedChanged(buttonView: CompoundButton?, isChecked: Boolean) {

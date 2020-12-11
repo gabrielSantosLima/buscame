@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card"
     android:layout_width="match_parent"
     android:layout_height="48dp"
     android:background="@color/historicBackgroud"
@@ -10,12 +11,13 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/historicBackgroud"
+        android:gravity="center"
         android:orientation="horizontal"
         android:padding="8dp">
 
         <TextView
             android:id="@+id/txt_time"
-            android:layout_width="0dp"
+            android:layout_width="44dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:fontFamily="@font/roboto"
@@ -26,7 +28,7 @@
 
         <TextView
             android:id="@+id/txt_term"
-            android:layout_width="70dp"
+            android:layout_width="102dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:fontFamily="@font/roboto"
@@ -38,7 +40,7 @@
 
         <TextView
             android:id="@+id/txt_site"
-            android:layout_width="148dp"
+            android:layout_width="159dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:fontFamily="@font/roboto"
@@ -48,10 +50,9 @@
             android:textSize="14sp" />
 
         <Button
-            android:id="@+id/bt_options"
-            android:layout_width="5dp"
-            android:layout_height="23dp"
-            android:layout_marginRight="23dp"
-            android:background="@drawable/ic_options" />
+            android:id="@+id/bt_delete"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/ic_baseline_delete_24" />
     </LinearLayout>
 </androidx.cardview.widget.CardView>
