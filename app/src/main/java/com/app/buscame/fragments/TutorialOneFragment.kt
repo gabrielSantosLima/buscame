@@ -20,10 +20,15 @@ class TutorialOneFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+        super.onCreate(savedInstanceState)
 
         btnAdvance.setOnClickListener{
             NavHostFragment.findNavController(this)
-                .navigate(R.id.action_tutorialOneFragment2_to_tutorialTwoFragment)
+                .navigate(R.id.action_tutorialOneFragment_to_tutorialTwoFragment)
+        }
+        bt_skip.setOnClickListener{
+            NavHostFragment.findNavController(this)
+                .navigate(R.id.action_tutorialOneFragment_to_mainActivityOpened)
         }
     }
 }

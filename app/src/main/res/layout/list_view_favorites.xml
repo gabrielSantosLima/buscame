@@ -43,9 +43,11 @@
             android:id="@+id/img_product"
             android:layout_width="136dp"
             android:layout_height="96dp"
+            android:foregroundGravity="center"
+            android:scaleType="fitCenter"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.149"
+            app:layout_constraintHorizontal_bias="0.09"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.672"
@@ -53,10 +55,8 @@
 
         <TextView
             android:id="@+id/txt_description"
-            android:layout_width="174dp"
-            android:layout_height="39dp"
-            android:layout_marginEnd="50dp"
-            android:layout_marginRight="50dp"
+            android:layout_width="183dp"
+            android:layout_height="35dp"
             android:fontFamily="@font/roboto"
             android:gravity="start|center_vertical"
             android:text="Descrição do produto"
@@ -64,16 +64,14 @@
             android:textSize="14sp"
             app:layout_constraintBottom_toTopOf="@+id/txt_price"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@+id/img_product"
+            app:layout_constraintHorizontal_bias="0.828"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txt_title" />
 
         <TextView
             android:id="@+id/txt_title"
-            android:layout_width="154dp"
+            android:layout_width="164dp"
             android:layout_height="70dp"
-            android:layout_marginEnd="70dp"
-            android:layout_marginRight="70dp"
             android:fontFamily="@font/roboto"
             android:gravity="start|center_vertical"
             android:text="Título do Produto"
@@ -81,16 +79,14 @@
             android:textSize="18sp"
             app:layout_constraintBottom_toTopOf="@+id/txt_description"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@+id/img_product"
+            app:layout_constraintHorizontal_bias="0.762"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/txt_price"
             android:layout_width="154dp"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="70dp"
-            android:layout_marginRight="70dp"
             android:fontFamily="@font/roboto"
             android:gravity="start|center_vertical"
             android:text="R$ 00,00"
@@ -99,8 +95,8 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@+id/img_product"
+            app:layout_constraintHorizontal_bias="0.731"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txt_description" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

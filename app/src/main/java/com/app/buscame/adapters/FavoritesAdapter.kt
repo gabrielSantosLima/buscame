@@ -6,9 +6,11 @@ import android.view.ViewGroup
 import android.widget.CompoundButton
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
+import coil.api.load
 import com.app.buscame.R
 import com.app.buscame.dto.FavoriteDto
 import com.app.buscame.features.favorites.FavoritesManagerJson
+import com.app.buscame.features.historic.HistoricManagerJson
 import com.app.buscame.features.redirectToPage.RedirectToPage
 import com.app.buscame.features.share.ShareMessage
 import com.app.buscame.utils.getSubstringOfText
@@ -31,6 +33,7 @@ class FavoritesAdapter(val fragment: Fragment) : RecyclerView.Adapter<FavoritesA
     {
         private val MAX_DESCRIPTION_LENGTH = 33
         private val MAX_TITLE_LENGTH = 32
+        private val historicManagerJson = HistoricManagerJson(fragment.requireContext().filesDir.path)
 
         init {
             itemView.bt_star.setOnCheckedChangeListener(this)
@@ -46,6 +49,8 @@ class FavoritesAdapter(val fragment: Fragment) : RecyclerView.Adapter<FavoritesA
                 itemView.bt_star.tag = favorite
                 itemView.bt_share.tag = favorite
                 itemView.card.tag = favorite
+                product.image ?: return
+                itemView.img_product.load(product.image)
             }
         }
 

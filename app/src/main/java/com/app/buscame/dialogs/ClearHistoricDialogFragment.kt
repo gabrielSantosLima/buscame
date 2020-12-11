@@ -21,11 +21,11 @@ class ClearHistoricDialogFragment(val applicationContext: Context) : DialogFragm
             val builder = AlertDialog.Builder(it)
             builder.setMessage(R.string.cleanHistoricMessage)
                 .setPositiveButton(
-                    R.string.cleanHistoricConfirm,
-                    DialogInterface.OnClickListener { _,_ -> historicManagerJson.removeAll() })
+                    R.string.cleanHistoricConfirm
+                ) { _, _ -> historicManagerJson.removeAll() }
                 .setNegativeButton(
-                    R.string.cleanHistoricCancel,
-                    DialogInterface.OnClickListener { dialog, id -> })
+                    R.string.cleanHistoricCancel
+                ) { dialog, id -> }
             builder.create()
         } ?: throw IllegalStateException("Activity cannot be null")
     }
