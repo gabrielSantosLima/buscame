@@ -20,14 +20,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.LoadingActivity" />
         <activity android:name=".ui.MainActivity" />
-        <activity android:name=".ui.SplashActivity">
-
-        </activity>
-        <activity android:name=".ui.SettingsActivity" />
-        <activity android:name=".ui.AboutActivity" />
-
+        <activity android:name=".ui.SplashActivity" />
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />

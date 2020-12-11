@@ -1,7 +1,6 @@
 package com.app.buscame.adapters
 
 import android.content.Context
-import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,7 +11,7 @@ import com.app.buscame.dto.FavoriteDto
 import com.app.buscame.features.favorites.FavoritesManagerJson
 import com.app.buscame.utils.getSubstringOfText
 import com.app.buscame.utils.toPriceFormat
-import kotlinx.android.synthetic.main.list_view_products.view.*
+import kotlinx.android.synthetic.main.list_view_favorites.view.*
 
 class FavoritesAdapter(applicationContext: Context) : RecyclerView.Adapter<FavoritesAdapter.FavoritesViewHolder>(){
 
@@ -57,7 +56,7 @@ class FavoritesAdapter(applicationContext: Context) : RecyclerView.Adapter<Favor
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FavoritesViewHolder {
-        val view =  LayoutInflater.from(parent.context).inflate(R.layout.list_view_products, parent, false)
+        val view =  LayoutInflater.from(parent.context).inflate(R.layout.list_view_favorites, parent, false)
         return FavoritesViewHolder(view, favoritesManagerJson)
     }
 

@@ -10,7 +10,6 @@ import com.app.buscame.adapters.FavoritesAdapter
 import com.app.buscame.R
 import com.app.buscame.features.favorites.FavoritesManagerJson
 import kotlinx.android.synthetic.main.fragment_favorite.*
-import kotlinx.android.synthetic.main.list_view_products.*
 
 class FavoriteFragment : Fragment() {
 

@@ -17,7 +17,7 @@
             android:id="@+id/bt_star"
             android:layout_width="25dp"
             android:layout_height="25dp"
-            android:background="@drawable/ic_star"
+            android:background="@drawable/ic_yellow_star"
             android:checked="true"
             android:textColor="@android:color/transparent"
             app:layout_constraintBottom_toBottomOf="parent"
