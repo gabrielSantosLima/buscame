@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="colors_attr">
+        <attr name="yellow" format="color" />
+        <attr name="tutorial" format="color" />
+        <attr name="btnFont" format="color" />
+        <attr name="btnBackground" format="color" />
+        <attr name="header" format="color" />
+        <attr name="settings" format="color" />
+        <attr name="black" format="color" />
+        <attr name="white" format="color" />
+        <attr name="shadow" format="color" />
+        <attr name="backgroundActivity" format="color" />
+        <attr name="inputSearch" format="color" />
+        <attr name="cardBackground" format="color" />
+        <attr name="red" format="color" />
+        <attr name="hint" format="color" />
+        <attr name="historicBackgroud" format="color" />
+        <attr name="confirmation" format="color" />
+        <attr name="noConnection" format="color" />
+    </declare-styleable>
+</resources>

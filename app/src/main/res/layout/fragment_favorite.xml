@@ -5,14 +5,14 @@
     android:id="@+id/favorite"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background"
+    android:background="?backgroundActivity"
     tools:context=".fragments.FavoriteFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/background">
+        android:background="?backgroundActivity">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/nav"
@@ -64,7 +64,7 @@
                 android:layout_height="30dp"
                 android:layout_marginStart="36dp"
                 android:layout_marginLeft="36dp"
-                android:background="@drawable/ic_star"
+                android:background="@drawable/ic_star_fav"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/textView"
                 app:layout_constraintStart_toStartOf="parent"
@@ -77,6 +77,7 @@
             android:id="@+id/list_favorites"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:background="@android:color/transparent"
             android:foregroundGravity="center"
             android:padding="8dp"
             app:layout_constraintBottom_toBottomOf="parent"

@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/settings"
-    tools:context=".ui.SettingsActivity">
+    android:background="?settings">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/layoutHeader"
@@ -40,7 +39,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/roboto"
             android:text="@string/settings"
-            android:textColor="#000000"
+            android:textColor="?black"
             android:textSize="30sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -87,7 +86,7 @@
             android:layout_marginBottom="20dp"
             android:fontFamily="@font/roboto"
             android:text="@string/dark"
-            android:textColor="@color/btnBackground"
+            android:textColor="?btnBackground"
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/textInDark"
@@ -101,8 +100,9 @@
             android:layout_marginStart="14dp"
             android:layout_marginLeft="14dp"
             android:layout_marginTop="20dp"
+            android:gravity="clip_vertical"
             android:text="@string/modoDark"
-            android:textColor="@color/btnBackground"
+            android:textColor="?btnBackground"
             android:textSize="12sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -157,7 +157,7 @@
             android:layout_marginLeft="14dp"
             android:fontFamily="@font/roboto"
             android:text="@string/information"
-            android:textColor="@color/btnBackground"
+            android:textColor="?btnBackground"
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/textInformationApp"
@@ -173,7 +173,7 @@
             android:layout_marginTop="25dp"
             android:fontFamily="@font/roboto"
             android:text="@string/informationApp"
-            android:textColor="@color/btnBackground"
+            android:textColor="?btnBackground"
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"

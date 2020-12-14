@@ -18,7 +18,7 @@
             android:layout_margin="4dp"
             android:fontFamily="@font/roboto"
             android:text="13 de setembro de 2020"
-            android:textColor="@color/black"
+            android:textColor="?black"
             android:textSize="16sp"
             android:textStyle="normal" />
 
