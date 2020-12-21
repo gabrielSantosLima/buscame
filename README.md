@@ -43,7 +43,7 @@ O BuscaMe é um aplicativo mobile de pesquisa por produtos gerais baseado na bus
 
 - Clonar o projeto `git clone https://github.com/gabrielSantosLima/buscame`
 - Executar o servidor da [API](https://github.com/gabrielSantosLima/buscame-api)
-- Alterar IP da máquina no arquivo [API de busca](https://github.com/gabrielSantosLima/buscame-api) que irá ser consultada
+- Alterar IP da máquina no arquivo [API de busca](https://github.com/gabrielSantosLima/buscame-api) que irá ser consultada no diretório `app/src/main/java/com/app/buscame/services/ProductSearchFactory.kt`
 ```kotlin
 object ProductSearchFactory {
     private const val BASE_URL = "http://<IP-DA-REDE-ONDE-O-SERVIDOR-DA-API-ESTÁ-EXECUTANDO>:8080/api/search/" // ex: 192.168.12.0
