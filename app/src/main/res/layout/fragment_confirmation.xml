@@ -9,9 +9,9 @@
 
     <Button
         android:id="@+id/bt_analyse"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:background="@drawable/ic_right_arrow"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:background="@color/confirmation"
         android:padding="8dp"
         android:textColor="@color/white"
         android:textStyle="bold"
@@ -20,7 +20,8 @@
         app:layout_constraintHorizontal_bias="0.958"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.945" />
+        app:layout_constraintVertical_bias="0.945"
+        tools:text="Confirmar" />
 
     <Button
         android:id="@+id/bt_close"

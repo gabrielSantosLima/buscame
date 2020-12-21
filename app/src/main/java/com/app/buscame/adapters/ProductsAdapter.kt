@@ -63,6 +63,7 @@ class ProductsAdapter(val products: List<ProductDto>, val fragment: Fragment) : 
                 itemView.txt_price.text = toPriceFormat(price!!)
                 itemView.bt_star.tag = product
                 itemView.bt_share.tag = product
+                itemView.card.tag = product
                 image ?: return
                 itemView.img_product.load(image)
             }

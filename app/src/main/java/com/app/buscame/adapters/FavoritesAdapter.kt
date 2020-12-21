@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import coil.api.load
 import com.app.buscame.R
 import com.app.buscame.dto.FavoriteDto
+import com.app.buscame.dto.HistoryDto
 import com.app.buscame.features.favorites.FavoritesManagerJson
 import com.app.buscame.features.historic.HistoricManagerJson
 import com.app.buscame.features.redirectToPage.RedirectToPage
@@ -16,6 +17,7 @@ import com.app.buscame.features.share.ShareMessage
 import com.app.buscame.utils.getSubstringOfText
 import com.app.buscame.utils.toPriceFormat
 import kotlinx.android.synthetic.main.list_view_favorites.view.*
+import java.util.*
 
 class FavoritesAdapter(val fragment: Fragment) : RecyclerView.Adapter<FavoritesAdapter.FavoritesViewHolder>(){
 
@@ -58,6 +60,12 @@ class FavoritesAdapter(val fragment: Fragment) : RecyclerView.Adapter<FavoritesA
             val favorite = v.tag as FavoriteDto
             val redirectToPage = RedirectToPage(fragment)
             redirectToPage.redirect(favorite.product.url)
+            historicManagerJson.save(HistoryDto(
+                favorite.id,
+                favorite.product.term,
+                favorite.product.url,
+                Date()
+            ))
         }
 
         override fun onCheckedChanged(buttonView: CompoundButton?, isChecked: Boolean) {

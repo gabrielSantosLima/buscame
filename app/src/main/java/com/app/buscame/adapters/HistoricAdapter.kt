@@ -31,7 +31,6 @@ class HistoricAdapter(val fragment: Fragment) :  RecyclerView.Adapter<HistoricAd
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HistoricViewHolder {
         val view =  LayoutInflater.from(parent.context).inflate(R.layout.list_view_historic, parent, false)
-
         return HistoricViewHolder(view, fragment)
     }
 

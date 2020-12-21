@@ -12,19 +12,19 @@ interface IProductSearchService {
     @POST("image")
     fun searchByImage(
         @Body image: RequestBody,
-        @Query("brandName") brandName: String = "",
-        @Query("price") price: Double = 0.0,
-        @Query("page") page: Int = 1,
-        @Query("url") url: String = ""
+        @Query("brandName") brandName: String?= null,
+        @Query("price") price: Double?= null,
+        @Query("page") page: Int? = null,
+        @Query("url") url: String?= null
     ): Call<List<ProductDto>>
 
     @POST("text")
     fun searchByText(
-        @Query("text") text: String,
-        @Query("brandName") brandName: String = "",
-        @Query("price") price: Double = 0.0,
-        @Query("page") page: Int = 1,
-        @Query("url") url: String = ""
+        @Query("text") text: String ,
+        @Query("brandName") brandName: String?= null,
+        @Query("price") price: Double?= null,
+        @Query("page") page: Int?= null,
+        @Query("url") url: String?= null
     ): Call<List<ProductDto>>
 }
 
