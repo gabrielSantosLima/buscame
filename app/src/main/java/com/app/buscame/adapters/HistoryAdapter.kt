@@ -12,7 +12,7 @@ import kotlinx.android.synthetic.main.list_view_history.view.*
 
 class HistoryAdapter(private val history : List<HistoryDto>, val fragment: Fragment) :  RecyclerView.Adapter<HistoryAdapter.HistoryViewHolder>(){
 
-    class HistoryViewHolder(itemView: View, val fragment: Fragment) : RecyclerView.ViewHolder(itemView),View.OnClickListener{
+    class HistoryViewHolder(itemView: View, val fragment: Fragment) : RecyclerView.ViewHolder(itemView){
 
         private val historicManagerJson = HistoricManagerJson(fragment.requireContext().filesDir.path)
 
@@ -26,7 +26,7 @@ class HistoryAdapter(private val history : List<HistoryDto>, val fragment: Fragm
             itemView.txt_term.text = history.term
             itemView.card.tag = history
             itemView.bt_delete.tag = history
-            itemView.bt_delete.setOnClickListener(this)
+            itemView.bt_delete.setOnClickListener{ delete(history, itemView) }
         }
 
         private fun openUrl(v: View){
@@ -35,8 +35,8 @@ class HistoryAdapter(private val history : List<HistoryDto>, val fragment: Fragm
             redirectToPage.redirect(history.url)
         }
 
-        override fun onClick(v: View?) {
-            val history = v?.tag as HistoryDto
+        fun delete(history: HistoryDto, v : View) {
+            v.visibility = View.INVISIBLE
             historicManagerJson.remove(history.id!!)
         }
     }

@@ -49,6 +49,9 @@ class HistoricFragment : Fragment(), View.OnClickListener {
     }
 
     override fun onClick(v: View?) {
-        ClearHistoricDialogFragment(requireContext()).show(childFragmentManager,"ClearHistoricDialogFragment")
+        ClearHistoricDialogFragment(
+            list_historic,
+            requireContext()
+        ).show(childFragmentManager,"ClearHistoricDialogFragment")
     }
 }
