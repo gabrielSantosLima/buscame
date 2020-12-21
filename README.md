@@ -12,7 +12,7 @@
 - <a href="#sobre">Sobre</a>
   - <a href="#introdução">Introdução</a>
   - <a href="#autores">Autores</a>
-- <a href="#funcionalidades">Objetivos</a>
+- <a href="#funcionalidades">Funcionalidades</a>
 - <a href="#instalação">Instalação</a>
 
 ## Sobre
